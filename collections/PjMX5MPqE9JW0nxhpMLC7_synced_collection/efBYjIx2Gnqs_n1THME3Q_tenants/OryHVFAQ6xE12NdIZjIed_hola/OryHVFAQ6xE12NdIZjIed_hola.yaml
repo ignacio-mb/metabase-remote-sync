@@ -1,0 +1,18 @@
+authority_level: null
+description: null
+archived: false
+slug: hola
+archive_operation_id: null
+name: hola
+personal_owner_id: null
+type: remote-synced
+is_sample: false
+parent_id: efBYjIx2Gnqs_n1THME3Q
+serdes/meta:
+- model: Collection
+  id: OryHVFAQ6xE12NdIZjIed
+  label: hola
+archived_directly: null
+entity_id: OryHVFAQ6xE12NdIZjIed
+namespace: null
+created_at: '2025-12-08T19:37:52.725123Z'

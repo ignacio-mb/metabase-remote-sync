@@ -7,7 +7,7 @@ table_id:
 - rails_example
 - users
 result_metadata:
-- database_type: int4
+- database_type: serial
   semantic_type: type/PK
   table_id:
   - postgres heroku
