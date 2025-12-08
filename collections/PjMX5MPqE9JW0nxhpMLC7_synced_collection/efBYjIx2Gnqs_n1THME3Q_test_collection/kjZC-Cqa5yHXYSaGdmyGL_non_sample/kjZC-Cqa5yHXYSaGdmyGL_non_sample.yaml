@@ -1,0 +1,18 @@
+authority_level: null
+description: null
+archived: false
+slug: non_sample
+archive_operation_id: null
+name: non-sample
+personal_owner_id: null
+type: remote-synced
+is_sample: false
+parent_id: efBYjIx2Gnqs_n1THME3Q
+serdes/meta:
+- model: Collection
+  id: kjZC-Cqa5yHXYSaGdmyGL
+  label: non_sample
+archived_directly: null
+entity_id: kjZC-Cqa5yHXYSaGdmyGL
+namespace: null
+created_at: '2025-12-08T19:21:25.038532Z'
