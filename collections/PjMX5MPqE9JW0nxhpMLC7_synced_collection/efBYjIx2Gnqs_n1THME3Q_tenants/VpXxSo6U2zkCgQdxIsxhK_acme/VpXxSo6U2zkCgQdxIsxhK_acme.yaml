@@ -1,18 +1,18 @@
 authority_level: null
 description: null
 archived: false
-slug: test_collection
+slug: acme
 archive_operation_id: null
-name: test collection
+name: acme
 personal_owner_id: null
 type: remote-synced
 is_sample: false
-parent_id: PjMX5MPqE9JW0nxhpMLC7
+parent_id: efBYjIx2Gnqs_n1THME3Q
 serdes/meta:
 - model: Collection
-  id: efBYjIx2Gnqs_n1THME3Q
-  label: test_collection
+  id: VpXxSo6U2zkCgQdxIsxhK
+  label: acme
 archived_directly: null
-entity_id: efBYjIx2Gnqs_n1THME3Q
+entity_id: VpXxSo6U2zkCgQdxIsxhK
 namespace: null
-created_at: '2025-12-08T19:17:17.846905Z'
+created_at: '2025-12-08T19:23:47.775724Z'
