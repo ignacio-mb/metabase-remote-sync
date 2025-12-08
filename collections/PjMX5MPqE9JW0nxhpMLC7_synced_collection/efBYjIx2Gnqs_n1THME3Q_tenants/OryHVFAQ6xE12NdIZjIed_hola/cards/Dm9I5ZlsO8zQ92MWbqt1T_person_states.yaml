@@ -1,0 +1,110 @@
+description: null
+archived: false
+collection_position: null
+source_card_id: null
+table_id:
+- postgres heroku
+- Test2
+- person_states
+result_metadata:
+- database_type: int4
+  semantic_type: type/PK
+  table_id:
+  - postgres heroku
+  - Test2
+  - person_states
+  qp/implicit-field?: true
+  lib/deduplicated-name: id
+  lib/original-name: id
+  name: id
+  lib/source: source/table-defaults
+  lib/source-column-alias: id
+  lib/original-display-name: ID
+  source: fields
+  field_ref:
+  - field
+  - - postgres heroku
+    - Test2
+    - person_states
+    - id
+  - null
+  effective_type: type/Integer
+  active: true
+  id:
+  - postgres heroku
+  - Test2
+  - person_states
+  - id
+  lib/desired-column-alias: id
+  position: 0
+  visibility_type: normal
+  display_name: ID
+  base_type: type/Integer
+- database_type: varchar
+  semantic_type: type/Category
+  table_id:
+  - postgres heroku
+  - Test2
+  - person_states
+  qp/implicit-field?: true
+  lib/deduplicated-name: state
+  lib/original-name: state
+  name: state
+  lib/source: source/table-defaults
+  lib/source-column-alias: state
+  lib/original-display-name: State
+  source: fields
+  field_ref:
+  - field
+  - - postgres heroku
+    - Test2
+    - person_states
+    - state
+  - null
+  effective_type: type/Text
+  active: true
+  id:
+  - postgres heroku
+  - Test2
+  - person_states
+  - state
+  lib/desired-column-alias: state
+  position: 1
+  visibility_type: normal
+  display_name: State
+  base_type: type/Text
+card_schema: 22
+database_id: postgres heroku
+enable_embedding: false
+collection_id: OryHVFAQ6xE12NdIZjIed
+query_type: query
+name: Person States
+document_id: null
+type: question
+creator_id: ignacio@metabase.com
+made_public_by_id: null
+embedding_params: null
+dataset_query:
+  database: postgres heroku
+  type: query
+  query:
+    source-table:
+    - postgres heroku
+    - Test2
+    - person_states
+parameter_mappings: []
+serdes/meta:
+- model: Card
+  id: Dm9I5ZlsO8zQ92MWbqt1T
+  label: person_states
+display: table
+archived_directly: false
+entity_id: Dm9I5ZlsO8zQ92MWbqt1T
+collection_preview: true
+visualization_settings:
+  column_settings: null
+metabase_version: v1.57.5.5 (665a201)
+parameters: []
+dashboard_id: null
+created_at: '2025-12-08T19:38:03.465624Z'
+public_uuid: null
