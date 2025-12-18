@@ -1,26 +1,39 @@
+name: Accounts
 description: null
+entity_id: Dw4gOEtdxMOPm02fX9FRM
+created_at: '2025-12-08T19:19:26.654822Z'
+creator_id: ignacio@metabase.com
+display: table
 archived: false
+collection_id: EGpXHxLYxLGPqRFqY6bJC
+collection_preview: true
 collection_position: null
-source_card_id: null
+query_type: query
+database_id: Sample Database
 table_id:
 - Sample Database
 - PUBLIC
 - ACCOUNTS
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Sample Database
+  query:
+    source-table:
+    - Sample Database
+    - PUBLIC
+    - ACCOUNTS
+  type: query
 result_metadata:
-- database_type: BIGINT
-  semantic_type: type/PK
-  table_id:
-  - Sample Database
-  - PUBLIC
-  - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: ID
-  lib/original-name: ID
-  name: ID
-  lib/source: source/table-defaults
-  lib/source-column-alias: ID
-  lib/original-display-name: ID
-  source: fields
+- active: true
+  base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: ID
+  effective_type: type/BigInteger
   field_ref:
   - field
   - - Sample Database
@@ -28,32 +41,32 @@ result_metadata:
     - ACCOUNTS
     - ID
   - null
-  effective_type: type/BigInteger
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - ID
-  lib/desired-column-alias: ID
+  name: ID
   position: 0
-  visibility_type: normal
-  display_name: ID
-  base_type: type/BigInteger
-- database_type: CHARACTER VARYING
-  semantic_type: type/Email
+  semantic_type: type/PK
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: EMAIL
-  lib/original-name: EMAIL
-  name: EMAIL
+  visibility_type: normal
+  lib/deduplicated-name: ID
+  lib/desired-column-alias: ID
+  lib/original-display-name: ID
+  lib/original-name: ID
   lib/source: source/table-defaults
-  lib/source-column-alias: EMAIL
-  lib/original-display-name: Email
-  source: fields
+  lib/source-column-alias: ID
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: CHARACTER VARYING
+  display_name: Email
+  effective_type: type/Text
   field_ref:
   - field
   - - Sample Database
@@ -61,32 +74,32 @@ result_metadata:
     - ACCOUNTS
     - EMAIL
   - null
-  effective_type: type/Text
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - EMAIL
-  lib/desired-column-alias: EMAIL
+  name: EMAIL
   position: 1
-  visibility_type: normal
-  display_name: Email
-  base_type: type/Text
-- database_type: CHARACTER VARYING
-  semantic_type: type/Name
+  semantic_type: type/Email
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: FIRST_NAME
-  lib/original-name: FIRST_NAME
-  name: FIRST_NAME
+  visibility_type: normal
+  lib/deduplicated-name: EMAIL
+  lib/desired-column-alias: EMAIL
+  lib/original-display-name: Email
+  lib/original-name: EMAIL
   lib/source: source/table-defaults
-  lib/source-column-alias: FIRST_NAME
-  lib/original-display-name: First Name
-  source: fields
+  lib/source-column-alias: EMAIL
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: CHARACTER VARYING
+  display_name: First Name
+  effective_type: type/Text
   field_ref:
   - field
   - - Sample Database
@@ -94,32 +107,32 @@ result_metadata:
     - ACCOUNTS
     - FIRST_NAME
   - null
-  effective_type: type/Text
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - FIRST_NAME
-  lib/desired-column-alias: FIRST_NAME
+  name: FIRST_NAME
   position: 2
-  visibility_type: normal
-  display_name: First Name
-  base_type: type/Text
-- database_type: CHARACTER VARYING
   semantic_type: type/Name
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: LAST_NAME
-  lib/original-name: LAST_NAME
-  name: LAST_NAME
+  visibility_type: normal
+  lib/deduplicated-name: FIRST_NAME
+  lib/desired-column-alias: FIRST_NAME
+  lib/original-display-name: First Name
+  lib/original-name: FIRST_NAME
   lib/source: source/table-defaults
-  lib/source-column-alias: LAST_NAME
-  lib/original-display-name: Last Name
-  source: fields
+  lib/source-column-alias: FIRST_NAME
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: CHARACTER VARYING
+  display_name: Last Name
+  effective_type: type/Text
   field_ref:
   - field
   - - Sample Database
@@ -127,32 +140,32 @@ result_metadata:
     - ACCOUNTS
     - LAST_NAME
   - null
-  effective_type: type/Text
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - LAST_NAME
-  lib/desired-column-alias: LAST_NAME
+  name: LAST_NAME
   position: 3
-  visibility_type: normal
-  display_name: Last Name
-  base_type: type/Text
-- database_type: CHARACTER VARYING
-  semantic_type: type/Category
+  semantic_type: type/Name
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: PLAN
-  lib/original-name: PLAN
-  name: PLAN
+  visibility_type: normal
+  lib/deduplicated-name: LAST_NAME
+  lib/desired-column-alias: LAST_NAME
+  lib/original-display-name: Last Name
+  lib/original-name: LAST_NAME
   lib/source: source/table-defaults
-  lib/source-column-alias: PLAN
-  lib/original-display-name: Plan
-  source: fields
+  lib/source-column-alias: LAST_NAME
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: CHARACTER VARYING
+  display_name: Plan
+  effective_type: type/Text
   field_ref:
   - field
   - - Sample Database
@@ -160,32 +173,32 @@ result_metadata:
     - ACCOUNTS
     - PLAN
   - null
-  effective_type: type/Text
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - PLAN
-  lib/desired-column-alias: PLAN
+  name: PLAN
   position: 4
-  visibility_type: normal
-  display_name: Plan
-  base_type: type/Text
-- database_type: CHARACTER VARYING
-  semantic_type: type/Source
+  semantic_type: type/Category
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: SOURCE
-  lib/original-name: SOURCE
-  name: SOURCE
+  visibility_type: normal
+  lib/deduplicated-name: PLAN
+  lib/desired-column-alias: PLAN
+  lib/original-display-name: Plan
+  lib/original-name: PLAN
   lib/source: source/table-defaults
-  lib/source-column-alias: SOURCE
-  lib/original-display-name: Source
-  source: fields
+  lib/source-column-alias: PLAN
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: CHARACTER VARYING
+  display_name: Source
+  effective_type: type/Text
   field_ref:
   - field
   - - Sample Database
@@ -193,31 +206,32 @@ result_metadata:
     - ACCOUNTS
     - SOURCE
   - null
-  effective_type: type/Text
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - SOURCE
-  lib/desired-column-alias: SOURCE
+  name: SOURCE
   position: 5
-  visibility_type: normal
-  display_name: Source
-  base_type: type/Text
-- database_type: INTEGER
+  semantic_type: type/Source
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: SEATS
-  lib/original-name: SEATS
-  name: SEATS
+  visibility_type: normal
+  lib/deduplicated-name: SOURCE
+  lib/desired-column-alias: SOURCE
+  lib/original-display-name: Source
+  lib/original-name: SOURCE
   lib/source: source/table-defaults
-  lib/source-column-alias: SEATS
-  lib/original-display-name: Seats
-  source: fields
+  lib/source-column-alias: SOURCE
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Integer
+  database_type: INTEGER
+  display_name: Seats
+  effective_type: type/Integer
   field_ref:
   - field
   - - Sample Database
@@ -225,32 +239,31 @@ result_metadata:
     - ACCOUNTS
     - SEATS
   - null
-  effective_type: type/Integer
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - SEATS
-  lib/desired-column-alias: SEATS
+  name: SEATS
   position: 6
-  visibility_type: normal
-  display_name: Seats
-  base_type: type/Integer
-- database_type: TIMESTAMP
-  semantic_type: type/CreationTimestamp
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: CREATED_AT
-  lib/original-name: CREATED_AT
-  name: CREATED_AT
+  visibility_type: normal
+  lib/deduplicated-name: SEATS
+  lib/desired-column-alias: SEATS
+  lib/original-display-name: Seats
+  lib/original-name: SEATS
   lib/source: source/table-defaults
-  lib/source-column-alias: CREATED_AT
-  lib/original-display-name: Created At
-  source: fields
+  lib/source-column-alias: SEATS
+  qp/implicit-field?: true
+- active: true
+  base_type: type/DateTime
+  database_type: TIMESTAMP
+  display_name: Created At
+  effective_type: type/DateTime
   field_ref:
   - field
   - - Sample Database
@@ -258,31 +271,32 @@ result_metadata:
     - ACCOUNTS
     - CREATED_AT
   - null
-  effective_type: type/DateTime
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - CREATED_AT
-  lib/desired-column-alias: CREATED_AT
+  name: CREATED_AT
   position: 7
-  visibility_type: normal
-  display_name: Created At
-  base_type: type/DateTime
-- database_type: TIMESTAMP
+  semantic_type: type/CreationTimestamp
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: TRIAL_ENDS_AT
-  lib/original-name: TRIAL_ENDS_AT
-  name: TRIAL_ENDS_AT
+  visibility_type: normal
+  lib/deduplicated-name: CREATED_AT
+  lib/desired-column-alias: CREATED_AT
+  lib/original-display-name: Created At
+  lib/original-name: CREATED_AT
   lib/source: source/table-defaults
-  lib/source-column-alias: TRIAL_ENDS_AT
-  lib/original-display-name: Trial Ends At
-  source: fields
+  lib/source-column-alias: CREATED_AT
+  qp/implicit-field?: true
+- active: true
+  base_type: type/DateTime
+  database_type: TIMESTAMP
+  display_name: Trial Ends At
+  effective_type: type/DateTime
   field_ref:
   - field
   - - Sample Database
@@ -290,32 +304,31 @@ result_metadata:
     - ACCOUNTS
     - TRIAL_ENDS_AT
   - null
-  effective_type: type/DateTime
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - TRIAL_ENDS_AT
-  lib/desired-column-alias: TRIAL_ENDS_AT
+  name: TRIAL_ENDS_AT
   position: 8
-  visibility_type: normal
-  display_name: Trial Ends At
-  base_type: type/DateTime
-- database_type: TIMESTAMP
-  semantic_type: type/CancelationTimestamp
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: CANCELED_AT
-  lib/original-name: CANCELED_AT
-  name: CANCELED_AT
+  visibility_type: normal
+  lib/deduplicated-name: TRIAL_ENDS_AT
+  lib/desired-column-alias: TRIAL_ENDS_AT
+  lib/original-display-name: Trial Ends At
+  lib/original-name: TRIAL_ENDS_AT
   lib/source: source/table-defaults
-  lib/source-column-alias: CANCELED_AT
-  lib/original-display-name: Canceled At
-  source: fields
+  lib/source-column-alias: TRIAL_ENDS_AT
+  qp/implicit-field?: true
+- active: true
+  base_type: type/DateTime
+  database_type: TIMESTAMP
+  display_name: Canceled At
+  effective_type: type/DateTime
   field_ref:
   - field
   - - Sample Database
@@ -323,31 +336,32 @@ result_metadata:
     - ACCOUNTS
     - CANCELED_AT
   - null
-  effective_type: type/DateTime
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - CANCELED_AT
-  lib/desired-column-alias: CANCELED_AT
+  name: CANCELED_AT
   position: 9
-  visibility_type: normal
-  display_name: Canceled At
-  base_type: type/DateTime
-- database_type: BOOLEAN
+  semantic_type: type/CancelationTimestamp
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: TRIAL_CONVERTED
-  lib/original-name: TRIAL_CONVERTED
-  name: TRIAL_CONVERTED
+  visibility_type: normal
+  lib/deduplicated-name: CANCELED_AT
+  lib/desired-column-alias: CANCELED_AT
+  lib/original-display-name: Canceled At
+  lib/original-name: CANCELED_AT
   lib/source: source/table-defaults
-  lib/source-column-alias: TRIAL_CONVERTED
-  lib/original-display-name: Trial Converted
-  source: fields
+  lib/source-column-alias: CANCELED_AT
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: BOOLEAN
+  display_name: Trial Converted
+  effective_type: type/Boolean
   field_ref:
   - field
   - - Sample Database
@@ -355,31 +369,31 @@ result_metadata:
     - ACCOUNTS
     - TRIAL_CONVERTED
   - null
-  effective_type: type/Boolean
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - TRIAL_CONVERTED
-  lib/desired-column-alias: TRIAL_CONVERTED
+  name: TRIAL_CONVERTED
   position: 10
-  visibility_type: normal
-  display_name: Trial Converted
-  base_type: type/Boolean
-- database_type: BOOLEAN
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: ACTIVE_SUBSCRIPTION
-  lib/original-name: ACTIVE_SUBSCRIPTION
-  name: ACTIVE_SUBSCRIPTION
+  visibility_type: normal
+  lib/deduplicated-name: TRIAL_CONVERTED
+  lib/desired-column-alias: TRIAL_CONVERTED
+  lib/original-display-name: Trial Converted
+  lib/original-name: TRIAL_CONVERTED
   lib/source: source/table-defaults
-  lib/source-column-alias: ACTIVE_SUBSCRIPTION
-  lib/original-display-name: Active Subscription
-  source: fields
+  lib/source-column-alias: TRIAL_CONVERTED
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: BOOLEAN
+  display_name: Active Subscription
+  effective_type: type/Boolean
   field_ref:
   - field
   - - Sample Database
@@ -387,31 +401,31 @@ result_metadata:
     - ACCOUNTS
     - ACTIVE_SUBSCRIPTION
   - null
-  effective_type: type/Boolean
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - ACTIVE_SUBSCRIPTION
-  lib/desired-column-alias: ACTIVE_SUBSCRIPTION
+  name: ACTIVE_SUBSCRIPTION
   position: 11
-  visibility_type: normal
-  display_name: Active Subscription
-  base_type: type/Boolean
-- database_type: BOOLEAN
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: LEGACY_PLAN
-  lib/original-name: LEGACY_PLAN
-  name: LEGACY_PLAN
+  visibility_type: normal
+  lib/deduplicated-name: ACTIVE_SUBSCRIPTION
+  lib/desired-column-alias: ACTIVE_SUBSCRIPTION
+  lib/original-display-name: Active Subscription
+  lib/original-name: ACTIVE_SUBSCRIPTION
   lib/source: source/table-defaults
-  lib/source-column-alias: LEGACY_PLAN
-  lib/original-display-name: Legacy Plan
-  source: fields
+  lib/source-column-alias: ACTIVE_SUBSCRIPTION
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: BOOLEAN
+  display_name: Legacy Plan
+  effective_type: type/Boolean
   field_ref:
   - field
   - - Sample Database
@@ -419,32 +433,31 @@ result_metadata:
     - ACCOUNTS
     - LEGACY_PLAN
   - null
-  effective_type: type/Boolean
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - LEGACY_PLAN
-  lib/desired-column-alias: LEGACY_PLAN
+  name: LEGACY_PLAN
   position: 12
-  visibility_type: normal
-  display_name: Legacy Plan
-  base_type: type/Boolean
-- database_type: DOUBLE PRECISION
-  semantic_type: type/Latitude
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: LATITUDE
-  lib/original-name: LATITUDE
-  name: LATITUDE
+  visibility_type: normal
+  lib/deduplicated-name: LEGACY_PLAN
+  lib/desired-column-alias: LEGACY_PLAN
+  lib/original-display-name: Legacy Plan
+  lib/original-name: LEGACY_PLAN
   lib/source: source/table-defaults
-  lib/source-column-alias: LATITUDE
-  lib/original-display-name: Latitude
-  source: fields
+  lib/source-column-alias: LEGACY_PLAN
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Float
+  database_type: DOUBLE PRECISION
+  display_name: Latitude
+  effective_type: type/Float
   field_ref:
   - field
   - - Sample Database
@@ -452,32 +465,32 @@ result_metadata:
     - ACCOUNTS
     - LATITUDE
   - null
-  effective_type: type/Float
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - LATITUDE
-  lib/desired-column-alias: LATITUDE
+  name: LATITUDE
   position: 13
-  visibility_type: normal
-  display_name: Latitude
-  base_type: type/Float
-- database_type: DOUBLE PRECISION
-  semantic_type: type/Longitude
+  semantic_type: type/Latitude
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: LONGITUDE
-  lib/original-name: LONGITUDE
-  name: LONGITUDE
+  visibility_type: normal
+  lib/deduplicated-name: LATITUDE
+  lib/desired-column-alias: LATITUDE
+  lib/original-display-name: Latitude
+  lib/original-name: LATITUDE
   lib/source: source/table-defaults
-  lib/source-column-alias: LONGITUDE
-  lib/original-display-name: Longitude
-  source: fields
+  lib/source-column-alias: LATITUDE
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Float
+  database_type: DOUBLE PRECISION
+  display_name: Longitude
+  effective_type: type/Float
   field_ref:
   - field
   - - Sample Database
@@ -485,32 +498,32 @@ result_metadata:
     - ACCOUNTS
     - LONGITUDE
   - null
-  effective_type: type/Float
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - LONGITUDE
-  lib/desired-column-alias: LONGITUDE
+  name: LONGITUDE
   position: 14
-  visibility_type: normal
-  display_name: Longitude
-  base_type: type/Float
-- database_type: CHARACTER
-  semantic_type: type/Country
+  semantic_type: type/Longitude
+  source: fields
   table_id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
-  qp/implicit-field?: true
-  lib/deduplicated-name: COUNTRY
-  lib/original-name: COUNTRY
-  name: COUNTRY
+  visibility_type: normal
+  lib/deduplicated-name: LONGITUDE
+  lib/desired-column-alias: LONGITUDE
+  lib/original-display-name: Longitude
+  lib/original-name: LONGITUDE
   lib/source: source/table-defaults
-  lib/source-column-alias: COUNTRY
-  lib/original-display-name: Country
-  source: fields
+  lib/source-column-alias: LONGITUDE
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: CHARACTER
+  display_name: Country
+  effective_type: type/Text
   field_ref:
   - field
   - - Sample Database
@@ -518,50 +531,37 @@ result_metadata:
     - ACCOUNTS
     - COUNTRY
   - null
-  effective_type: type/Text
-  active: true
   id:
   - Sample Database
   - PUBLIC
   - ACCOUNTS
   - COUNTRY
-  lib/desired-column-alias: COUNTRY
+  name: COUNTRY
   position: 15
+  semantic_type: type/Country
+  source: fields
+  table_id:
+  - Sample Database
+  - PUBLIC
+  - ACCOUNTS
   visibility_type: normal
-  display_name: Country
-  base_type: type/Text
-card_schema: 22
-database_id: Sample Database
-enable_embedding: false
-collection_id: EGpXHxLYxLGPqRFqY6bJC
-query_type: query
-name: Accounts
-document_id: null
-type: question
-creator_id: ignacio@metabase.com
-made_public_by_id: null
-embedding_params: null
-dataset_query:
-  database: Sample Database
-  type: query
-  query:
-    source-table:
-    - Sample Database
-    - PUBLIC
-    - ACCOUNTS
-parameter_mappings: []
-serdes/meta:
-- model: Card
-  id: Dw4gOEtdxMOPm02fX9FRM
-  label: accounts
-display: table
-archived_directly: false
-entity_id: Dw4gOEtdxMOPm02fX9FRM
-collection_preview: true
+  lib/deduplicated-name: COUNTRY
+  lib/desired-column-alias: COUNTRY
+  lib/original-display-name: Country
+  lib/original-name: COUNTRY
+  lib/source: source/table-defaults
+  lib/source-column-alias: COUNTRY
+  qp/implicit-field?: true
 visualization_settings:
   column_settings: null
-metabase_version: v1.57.5.5 (665a201)
-parameters: []
+card_schema: 23
+serdes/meta:
+- id: Dw4gOEtdxMOPm02fX9FRM
+  label: accounts
+  model: Card
+archived_directly: false
 dashboard_id: null
-created_at: '2025-12-08T19:19:26.654822Z'
-public_uuid: null
+document_id: null
+metabase_version: v1.57.5.5 (665a201)
+source_card_id: null
+type: question

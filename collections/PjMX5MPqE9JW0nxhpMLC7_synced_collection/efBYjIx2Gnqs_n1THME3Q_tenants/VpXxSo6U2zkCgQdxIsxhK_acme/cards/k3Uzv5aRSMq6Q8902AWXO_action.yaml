@@ -1,26 +1,39 @@
+name: Action
 description: null
+entity_id: k3Uzv5aRSMq6Q8902AWXO
+created_at: '2025-12-08T19:24:14.196424Z'
+creator_id: ignacio@metabase.com
+display: table
 archived: false
+collection_id: VpXxSo6U2zkCgQdxIsxhK
+collection_preview: true
 collection_position: null
-source_card_id: null
+query_type: query
+database_id: postgres heroku
 table_id:
 - postgres heroku
 - public
 - action
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: postgres heroku
+  query:
+    source-table:
+    - postgres heroku
+    - public
+    - action
+  type: query
 result_metadata:
-- database_type: int4
-  semantic_type: type/PK
-  table_id:
-  - postgres heroku
-  - public
-  - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: id
-  lib/original-name: id
-  name: id
-  lib/source: source/table-defaults
-  lib/source-column-alias: id
-  lib/original-display-name: ID
-  source: fields
+- active: true
+  base_type: type/Integer
+  database_type: int4
+  display_name: ID
+  effective_type: type/Integer
   field_ref:
   - field
   - - postgres heroku
@@ -28,33 +41,33 @@ result_metadata:
     - action
     - id
   - null
-  effective_type: type/Integer
-  active: true
   id:
   - postgres heroku
   - public
   - action
   - id
-  lib/desired-column-alias: id
+  name: id
   position: 0
-  visibility_type: normal
-  display_name: ID
-  base_type: type/Integer
-- description: The timestamp of when the action was created
-  database_type: timestamptz
-  semantic_type: type/CreationTimestamp
+  semantic_type: type/PK
+  source: fields
   table_id:
   - postgres heroku
   - public
   - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: created_at
-  lib/original-name: created_at
-  name: created_at
+  visibility_type: normal
+  lib/deduplicated-name: id
+  lib/desired-column-alias: id
+  lib/original-display-name: ID
+  lib/original-name: id
   lib/source: source/table-defaults
-  lib/source-column-alias: created_at
-  lib/original-display-name: Created At
-  source: fields
+  lib/source-column-alias: id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/DateTimeWithLocalTZ
+  database_type: timestamptz
+  description: The timestamp of when the action was created
+  display_name: Created At
+  effective_type: type/DateTimeWithLocalTZ
   field_ref:
   - field
   - - postgres heroku
@@ -62,33 +75,33 @@ result_metadata:
     - action
     - created_at
   - null
-  effective_type: type/DateTimeWithLocalTZ
-  active: true
   id:
   - postgres heroku
   - public
   - action
   - created_at
-  lib/desired-column-alias: created_at
+  name: created_at
   position: 1
-  visibility_type: normal
-  display_name: Created At
-  base_type: type/DateTimeWithLocalTZ
-- description: The timestamp of when the action was updated
-  database_type: timestamptz
-  semantic_type: type/UpdatedTimestamp
+  semantic_type: type/CreationTimestamp
+  source: fields
   table_id:
   - postgres heroku
   - public
   - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: updated_at
-  lib/original-name: updated_at
-  name: updated_at
+  visibility_type: normal
+  lib/deduplicated-name: created_at
+  lib/desired-column-alias: created_at
+  lib/original-display-name: Created At
+  lib/original-name: created_at
   lib/source: source/table-defaults
-  lib/source-column-alias: updated_at
-  lib/original-display-name: Updated At
-  source: fields
+  lib/source-column-alias: created_at
+  qp/implicit-field?: true
+- active: true
+  base_type: type/DateTimeWithLocalTZ
+  database_type: timestamptz
+  description: The timestamp of when the action was updated
+  display_name: Updated At
+  effective_type: type/DateTimeWithLocalTZ
   field_ref:
   - field
   - - postgres heroku
@@ -96,33 +109,33 @@ result_metadata:
     - action
     - updated_at
   - null
-  effective_type: type/DateTimeWithLocalTZ
-  active: true
   id:
   - postgres heroku
   - public
   - action
   - updated_at
-  lib/desired-column-alias: updated_at
+  name: updated_at
   position: 2
-  visibility_type: normal
-  display_name: Updated At
-  base_type: type/DateTimeWithLocalTZ
-- description: Type of action
-  database_type: text
-  semantic_type: type/Category
+  semantic_type: type/UpdatedTimestamp
+  source: fields
   table_id:
   - postgres heroku
   - public
   - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: type
-  lib/original-name: type
-  name: type
+  visibility_type: normal
+  lib/deduplicated-name: updated_at
+  lib/desired-column-alias: updated_at
+  lib/original-display-name: Updated At
+  lib/original-name: updated_at
   lib/source: source/table-defaults
-  lib/source-column-alias: type
-  lib/original-display-name: Type
-  source: fields
+  lib/source-column-alias: updated_at
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  description: Type of action
+  display_name: Type
+  effective_type: type/Text
   field_ref:
   - field
   - - postgres heroku
@@ -130,38 +143,33 @@ result_metadata:
     - action
     - type
   - null
-  effective_type: type/Text
-  active: true
   id:
   - postgres heroku
   - public
   - action
   - type
-  lib/desired-column-alias: type
+  name: type
   position: 3
-  visibility_type: normal
-  display_name: Type
-  base_type: type/Text
-- description: The associated model
-  database_type: int4
-  semantic_type: type/FK
+  semantic_type: type/Category
+  source: fields
   table_id:
   - postgres heroku
   - public
   - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: model_id
-  lib/original-name: model_id
-  name: model_id
+  visibility_type: normal
+  lib/deduplicated-name: type
+  lib/desired-column-alias: type
+  lib/original-display-name: Type
+  lib/original-name: type
   lib/source: source/table-defaults
-  lib/source-column-alias: model_id
-  lib/original-display-name: Model ID
-  source: fields
-  fk_target_field_id:
-  - postgres heroku
-  - public
-  - report_card
-  - id
+  lib/source-column-alias: type
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Integer
+  database_type: int4
+  description: The associated model
+  display_name: Model ID
+  effective_type: type/Integer
   field_ref:
   - field
   - - postgres heroku
@@ -169,33 +177,38 @@ result_metadata:
     - action
     - model_id
   - null
-  effective_type: type/Integer
-  active: true
+  fk_target_field_id:
+  - postgres heroku
+  - public
+  - report_card
+  - id
   id:
   - postgres heroku
   - public
   - action
   - model_id
-  lib/desired-column-alias: model_id
+  name: model_id
   position: 4
-  visibility_type: normal
-  display_name: Model ID
-  base_type: type/Integer
-- description: The name of the action
-  database_type: varchar
-  semantic_type: type/Name
+  semantic_type: type/FK
+  source: fields
   table_id:
   - postgres heroku
   - public
   - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: name
-  lib/original-name: name
-  name: name
+  visibility_type: normal
+  lib/deduplicated-name: model_id
+  lib/desired-column-alias: model_id
+  lib/original-display-name: Model ID
+  lib/original-name: model_id
   lib/source: source/table-defaults
-  lib/source-column-alias: name
-  lib/original-display-name: Name
-  source: fields
+  lib/source-column-alias: model_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  description: The name of the action
+  display_name: Name
+  effective_type: type/Text
   field_ref:
   - field
   - - postgres heroku
@@ -203,33 +216,33 @@ result_metadata:
     - action
     - name
   - null
-  effective_type: type/Text
-  active: true
   id:
   - postgres heroku
   - public
   - action
   - name
-  lib/desired-column-alias: name
+  name: name
   position: 5
-  visibility_type: normal
-  display_name: Name
-  base_type: type/Text
-- description: The description of the action
-  database_type: text
-  semantic_type: type/Description
+  semantic_type: type/Name
+  source: fields
   table_id:
   - postgres heroku
   - public
   - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: description
-  lib/original-name: description
-  name: description
+  visibility_type: normal
+  lib/deduplicated-name: name
+  lib/desired-column-alias: name
+  lib/original-display-name: Name
+  lib/original-name: name
   lib/source: source/table-defaults
-  lib/source-column-alias: description
-  lib/original-display-name: Description
-  source: fields
+  lib/source-column-alias: name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  description: The description of the action
+  display_name: Description
+  effective_type: type/Text
   field_ref:
   - field
   - - postgres heroku
@@ -237,32 +250,33 @@ result_metadata:
     - action
     - description
   - null
-  effective_type: type/Text
-  active: true
   id:
   - postgres heroku
   - public
   - action
   - description
-  lib/desired-column-alias: description
+  name: description
   position: 6
-  visibility_type: normal
-  display_name: Description
-  base_type: type/Text
-- description: The saved parameters for this action
-  database_type: text
+  semantic_type: type/Description
+  source: fields
   table_id:
   - postgres heroku
   - public
   - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: parameters
-  lib/original-name: parameters
-  name: parameters
+  visibility_type: normal
+  lib/deduplicated-name: description
+  lib/desired-column-alias: description
+  lib/original-display-name: Description
+  lib/original-name: description
   lib/source: source/table-defaults
-  lib/source-column-alias: parameters
-  lib/original-display-name: Parameters
-  source: fields
+  lib/source-column-alias: description
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  description: The saved parameters for this action
+  display_name: Parameters
+  effective_type: type/Text
   field_ref:
   - field
   - - postgres heroku
@@ -270,32 +284,32 @@ result_metadata:
     - action
     - parameters
   - null
-  effective_type: type/Text
-  active: true
   id:
   - postgres heroku
   - public
   - action
   - parameters
-  lib/desired-column-alias: parameters
+  name: parameters
   position: 7
-  visibility_type: normal
-  display_name: Parameters
-  base_type: type/Text
-- description: The saved parameter mappings for this action
-  database_type: text
+  source: fields
   table_id:
   - postgres heroku
   - public
   - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: parameter_mappings
-  lib/original-name: parameter_mappings
-  name: parameter_mappings
+  visibility_type: normal
+  lib/deduplicated-name: parameters
+  lib/desired-column-alias: parameters
+  lib/original-display-name: Parameters
+  lib/original-name: parameters
   lib/source: source/table-defaults
-  lib/source-column-alias: parameter_mappings
-  lib/original-display-name: Parameter Mappings
-  source: fields
+  lib/source-column-alias: parameters
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  description: The saved parameter mappings for this action
+  display_name: Parameter Mappings
+  effective_type: type/Text
   field_ref:
   - field
   - - postgres heroku
@@ -303,32 +317,32 @@ result_metadata:
     - action
     - parameter_mappings
   - null
-  effective_type: type/Text
-  active: true
   id:
   - postgres heroku
   - public
   - action
   - parameter_mappings
-  lib/desired-column-alias: parameter_mappings
+  name: parameter_mappings
   position: 8
-  visibility_type: normal
-  display_name: Parameter Mappings
-  base_type: type/Text
-- description: The UI visualization_settings for this action
-  database_type: text
+  source: fields
   table_id:
   - postgres heroku
   - public
   - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: visualization_settings
-  lib/original-name: visualization_settings
-  name: visualization_settings
+  visibility_type: normal
+  lib/deduplicated-name: parameter_mappings
+  lib/desired-column-alias: parameter_mappings
+  lib/original-display-name: Parameter Mappings
+  lib/original-name: parameter_mappings
   lib/source: source/table-defaults
-  lib/source-column-alias: visualization_settings
-  lib/original-display-name: Visualization Settings
-  source: fields
+  lib/source-column-alias: parameter_mappings
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: text
+  description: The UI visualization_settings for this action
+  display_name: Visualization Settings
+  effective_type: type/Text
   field_ref:
   - field
   - - postgres heroku
@@ -336,32 +350,32 @@ result_metadata:
     - action
     - visualization_settings
   - null
-  effective_type: type/Text
-  active: true
   id:
   - postgres heroku
   - public
   - action
   - visualization_settings
-  lib/desired-column-alias: visualization_settings
+  name: visualization_settings
   position: 9
-  visibility_type: normal
-  display_name: Visualization Settings
-  base_type: type/Text
-- description: Unique UUID used to in publically-accessible links to this Action.
-  database_type: bpchar
+  source: fields
   table_id:
   - postgres heroku
   - public
   - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: public_uuid
-  lib/original-name: public_uuid
-  name: public_uuid
+  visibility_type: normal
+  lib/deduplicated-name: visualization_settings
+  lib/desired-column-alias: visualization_settings
+  lib/original-display-name: Visualization Settings
+  lib/original-name: visualization_settings
   lib/source: source/table-defaults
-  lib/source-column-alias: public_uuid
-  lib/original-display-name: Public UUID
-  source: fields
+  lib/source-column-alias: visualization_settings
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: bpchar
+  description: Unique UUID used to in publically-accessible links to this Action.
+  display_name: Public UUID
+  effective_type: type/Text
   field_ref:
   - field
   - - postgres heroku
@@ -369,38 +383,32 @@ result_metadata:
     - action
     - public_uuid
   - null
-  effective_type: type/Text
-  active: true
   id:
   - postgres heroku
   - public
   - action
   - public_uuid
-  lib/desired-column-alias: public_uuid
+  name: public_uuid
   position: 10
-  visibility_type: normal
-  display_name: Public UUID
-  base_type: type/Text
-- description: The ID of the User who first publically shared this Action.
-  database_type: int4
-  semantic_type: type/FK
+  source: fields
   table_id:
   - postgres heroku
   - public
   - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: made_public_by_id
-  lib/original-name: made_public_by_id
-  name: made_public_by_id
+  visibility_type: normal
+  lib/deduplicated-name: public_uuid
+  lib/desired-column-alias: public_uuid
+  lib/original-display-name: Public UUID
+  lib/original-name: public_uuid
   lib/source: source/table-defaults
-  lib/source-column-alias: made_public_by_id
-  lib/original-display-name: Made Public By ID
-  source: fields
-  fk_target_field_id:
-  - postgres heroku
-  - public
-  - core_user
-  - id
+  lib/source-column-alias: public_uuid
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Integer
+  database_type: int4
+  description: The ID of the User who first publically shared this Action.
+  display_name: Made Public By ID
+  effective_type: type/Integer
   field_ref:
   - field
   - - postgres heroku
@@ -408,38 +416,38 @@ result_metadata:
     - action
     - made_public_by_id
   - null
-  effective_type: type/Integer
-  active: true
-  id:
-  - postgres heroku
-  - public
-  - action
-  - made_public_by_id
-  lib/desired-column-alias: made_public_by_id
-  position: 11
-  visibility_type: normal
-  display_name: Made Public By ID
-  base_type: type/Integer
-- description: The user who created the action
-  database_type: int4
-  semantic_type: type/FK
-  table_id:
-  - postgres heroku
-  - public
-  - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: creator_id
-  lib/original-name: creator_id
-  name: creator_id
-  lib/source: source/table-defaults
-  lib/source-column-alias: creator_id
-  lib/original-display-name: Creator ID
-  source: fields
   fk_target_field_id:
   - postgres heroku
   - public
   - core_user
   - id
+  id:
+  - postgres heroku
+  - public
+  - action
+  - made_public_by_id
+  name: made_public_by_id
+  position: 11
+  semantic_type: type/FK
+  source: fields
+  table_id:
+  - postgres heroku
+  - public
+  - action
+  visibility_type: normal
+  lib/deduplicated-name: made_public_by_id
+  lib/desired-column-alias: made_public_by_id
+  lib/original-display-name: Made Public By ID
+  lib/original-name: made_public_by_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: made_public_by_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Integer
+  database_type: int4
+  description: The user who created the action
+  display_name: Creator ID
+  effective_type: type/Integer
   field_ref:
   - field
   - - postgres heroku
@@ -447,32 +455,38 @@ result_metadata:
     - action
     - creator_id
   - null
-  effective_type: type/Integer
-  active: true
+  fk_target_field_id:
+  - postgres heroku
+  - public
+  - core_user
+  - id
   id:
   - postgres heroku
   - public
   - action
   - creator_id
-  lib/desired-column-alias: creator_id
+  name: creator_id
   position: 12
-  visibility_type: normal
-  display_name: Creator ID
-  base_type: type/Integer
-- description: Whether or not the action has been archived
-  database_type: bool
+  semantic_type: type/FK
+  source: fields
   table_id:
   - postgres heroku
   - public
   - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: archived
-  lib/original-name: archived
-  name: archived
+  visibility_type: normal
+  lib/deduplicated-name: creator_id
+  lib/desired-column-alias: creator_id
+  lib/original-display-name: Creator ID
+  lib/original-name: creator_id
   lib/source: source/table-defaults
-  lib/source-column-alias: archived
-  lib/original-display-name: Archived
-  source: fields
+  lib/source-column-alias: creator_id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Boolean
+  database_type: bool
+  description: Whether or not the action has been archived
+  display_name: Archived
+  effective_type: type/Boolean
   field_ref:
   - field
   - - postgres heroku
@@ -480,32 +494,32 @@ result_metadata:
     - action
     - archived
   - null
-  effective_type: type/Boolean
-  active: true
   id:
   - postgres heroku
   - public
   - action
   - archived
-  lib/desired-column-alias: archived
+  name: archived
   position: 13
-  visibility_type: normal
-  display_name: Archived
-  base_type: type/Boolean
-- description: Random NanoID tag for unique identity.
-  database_type: bpchar
+  source: fields
   table_id:
   - postgres heroku
   - public
   - action
-  qp/implicit-field?: true
-  lib/deduplicated-name: entity_id
-  lib/original-name: entity_id
-  name: entity_id
+  visibility_type: normal
+  lib/deduplicated-name: archived
+  lib/desired-column-alias: archived
+  lib/original-display-name: Archived
+  lib/original-name: archived
   lib/source: source/table-defaults
-  lib/source-column-alias: entity_id
-  lib/original-display-name: Entity ID
-  source: fields
+  lib/source-column-alias: archived
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: bpchar
+  description: Random NanoID tag for unique identity.
+  display_name: Entity ID
+  effective_type: type/Text
   field_ref:
   - field
   - - postgres heroku
@@ -513,50 +527,36 @@ result_metadata:
     - action
     - entity_id
   - null
-  effective_type: type/Text
-  active: true
   id:
   - postgres heroku
   - public
   - action
   - entity_id
-  lib/desired-column-alias: entity_id
+  name: entity_id
   position: 14
+  source: fields
+  table_id:
+  - postgres heroku
+  - public
+  - action
   visibility_type: normal
-  display_name: Entity ID
-  base_type: type/Text
-card_schema: 22
-database_id: postgres heroku
-enable_embedding: false
-collection_id: VpXxSo6U2zkCgQdxIsxhK
-query_type: query
-name: Action
-document_id: null
-type: question
-creator_id: ignacio@metabase.com
-made_public_by_id: null
-embedding_params: null
-dataset_query:
-  database: postgres heroku
-  type: query
-  query:
-    source-table:
-    - postgres heroku
-    - public
-    - action
-parameter_mappings: []
-serdes/meta:
-- model: Card
-  id: k3Uzv5aRSMq6Q8902AWXO
-  label: action
-display: table
-archived_directly: false
-entity_id: k3Uzv5aRSMq6Q8902AWXO
-collection_preview: true
+  lib/deduplicated-name: entity_id
+  lib/desired-column-alias: entity_id
+  lib/original-display-name: Entity ID
+  lib/original-name: entity_id
+  lib/source: source/table-defaults
+  lib/source-column-alias: entity_id
+  qp/implicit-field?: true
 visualization_settings:
   column_settings: null
-metabase_version: v1.57.5.5 (665a201)
-parameters: []
+card_schema: 23
+serdes/meta:
+- id: k3Uzv5aRSMq6Q8902AWXO
+  label: action
+  model: Card
+archived_directly: false
 dashboard_id: null
-created_at: '2025-12-08T19:24:14.196424Z'
-public_uuid: null
+document_id: null
+metabase_version: v1.57.5.5 (665a201)
+source_card_id: null
+type: question
