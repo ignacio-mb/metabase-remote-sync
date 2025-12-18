@@ -1,18 +1,18 @@
-authority_level: null
-description: a new sample tenant, just like acme
-archived: false
-slug: sade
-archive_operation_id: null
 name: sade
-personal_owner_id: null
-type: remote-synced
-is_sample: false
-parent_id: efBYjIx2Gnqs_n1THME3Q
-serdes/meta:
-- model: Collection
-  id: EVB98APi9vZHLzZv9lmOX
-  label: sade
-archived_directly: null
+description: a new sample tenant, just like acme
 entity_id: EVB98APi9vZHLzZv9lmOX
-namespace: null
+slug: sade
 created_at: '2025-12-08T19:28:49.433444Z'
+archived: false
+type: remote-synced
+parent_id: efBYjIx2Gnqs_n1THME3Q
+personal_owner_id: null
+namespace: null
+authority_level: null
+serdes/meta:
+- id: EVB98APi9vZHLzZv9lmOX
+  label: sade
+  model: Collection
+archive_operation_id: null
+archived_directly: null
+is_sample: false

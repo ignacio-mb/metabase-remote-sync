@@ -1,26 +1,39 @@
+name: Users
 description: null
+entity_id: Y6d2GVD_f_WVgrGdqkGHg
+created_at: '2025-12-08T19:28:58.062319Z'
+creator_id: nachobeines@gmail.com
+display: table
 archived: false
+collection_id: EVB98APi9vZHLzZv9lmOX
+collection_preview: true
 collection_position: null
-source_card_id: null
+query_type: query
+database_id: postgres heroku
 table_id:
 - postgres heroku
 - rails_example
 - users
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: postgres heroku
+  query:
+    source-table:
+    - postgres heroku
+    - rails_example
+    - users
+  type: query
 result_metadata:
-- database_type: serial
-  semantic_type: type/PK
-  table_id:
-  - postgres heroku
-  - rails_example
-  - users
-  qp/implicit-field?: true
-  lib/deduplicated-name: id
-  lib/original-name: id
-  name: id
-  lib/source: source/table-defaults
-  lib/source-column-alias: id
-  lib/original-display-name: ID
-  source: fields
+- active: true
+  base_type: type/Integer
+  database_type: serial
+  display_name: ID
+  effective_type: type/Integer
   field_ref:
   - field
   - - postgres heroku
@@ -28,32 +41,32 @@ result_metadata:
     - users
     - id
   - null
-  effective_type: type/Integer
-  active: true
   id:
   - postgres heroku
   - rails_example
   - users
   - id
-  lib/desired-column-alias: id
+  name: id
   position: 0
-  visibility_type: normal
-  display_name: ID
-  base_type: type/Integer
-- database_type: varchar
-  semantic_type: type/Name
+  semantic_type: type/PK
+  source: fields
   table_id:
   - postgres heroku
   - rails_example
   - users
-  qp/implicit-field?: true
-  lib/deduplicated-name: name
-  lib/original-name: name
-  name: name
+  visibility_type: normal
+  lib/deduplicated-name: id
+  lib/desired-column-alias: id
+  lib/original-display-name: ID
+  lib/original-name: id
   lib/source: source/table-defaults
-  lib/source-column-alias: name
-  lib/original-display-name: Name
-  source: fields
+  lib/source-column-alias: id
+  qp/implicit-field?: true
+- active: true
+  base_type: type/Text
+  database_type: varchar
+  display_name: Name
+  effective_type: type/Text
   field_ref:
   - field
   - - postgres heroku
@@ -61,32 +74,32 @@ result_metadata:
     - users
     - name
   - null
-  effective_type: type/Text
-  active: true
   id:
   - postgres heroku
   - rails_example
   - users
   - name
-  lib/desired-column-alias: name
+  name: name
   position: 1
-  visibility_type: normal
-  display_name: Name
-  base_type: type/Text
-- database_type: '"rails_example"."customer_type_enum"'
-  semantic_type: type/Category
+  semantic_type: type/Name
+  source: fields
   table_id:
   - postgres heroku
   - rails_example
   - users
-  qp/implicit-field?: true
-  lib/deduplicated-name: customer_type
-  lib/original-name: customer_type
-  name: customer_type
+  visibility_type: normal
+  lib/deduplicated-name: name
+  lib/desired-column-alias: name
+  lib/original-display-name: Name
+  lib/original-name: name
   lib/source: source/table-defaults
-  lib/source-column-alias: customer_type
-  lib/original-display-name: Customer Type
-  source: fields
+  lib/source-column-alias: name
+  qp/implicit-field?: true
+- active: true
+  base_type: type/PostgresEnum
+  database_type: '"rails_example"."customer_type_enum"'
+  display_name: Customer Type
+  effective_type: type/PostgresEnum
   field_ref:
   - field
   - - postgres heroku
@@ -94,32 +107,32 @@ result_metadata:
     - users
     - customer_type
   - null
-  effective_type: type/PostgresEnum
-  active: true
   id:
   - postgres heroku
   - rails_example
   - users
   - customer_type
-  lib/desired-column-alias: customer_type
+  name: customer_type
   position: 2
-  visibility_type: normal
-  display_name: Customer Type
-  base_type: type/PostgresEnum
-- database_type: timestamp
-  semantic_type: type/CreationTimestamp
+  semantic_type: type/Category
+  source: fields
   table_id:
   - postgres heroku
   - rails_example
   - users
-  qp/implicit-field?: true
-  lib/deduplicated-name: created_at
-  lib/original-name: created_at
-  name: created_at
+  visibility_type: normal
+  lib/deduplicated-name: customer_type
+  lib/desired-column-alias: customer_type
+  lib/original-display-name: Customer Type
+  lib/original-name: customer_type
   lib/source: source/table-defaults
-  lib/source-column-alias: created_at
-  lib/original-display-name: Created At
-  source: fields
+  lib/source-column-alias: customer_type
+  qp/implicit-field?: true
+- active: true
+  base_type: type/DateTime
+  database_type: timestamp
+  display_name: Created At
+  effective_type: type/DateTime
   field_ref:
   - field
   - - postgres heroku
@@ -127,50 +140,37 @@ result_metadata:
     - users
     - created_at
   - null
-  effective_type: type/DateTime
-  active: true
   id:
   - postgres heroku
   - rails_example
   - users
   - created_at
-  lib/desired-column-alias: created_at
+  name: created_at
   position: 3
+  semantic_type: type/CreationTimestamp
+  source: fields
+  table_id:
+  - postgres heroku
+  - rails_example
+  - users
   visibility_type: normal
-  display_name: Created At
-  base_type: type/DateTime
-card_schema: 22
-database_id: postgres heroku
-enable_embedding: false
-collection_id: EVB98APi9vZHLzZv9lmOX
-query_type: query
-name: Users
-document_id: null
-type: question
-creator_id: nachobeines@gmail.com
-made_public_by_id: null
-embedding_params: null
-dataset_query:
-  database: postgres heroku
-  type: query
-  query:
-    source-table:
-    - postgres heroku
-    - rails_example
-    - users
-parameter_mappings: []
-serdes/meta:
-- model: Card
-  id: Y6d2GVD_f_WVgrGdqkGHg
-  label: users
-display: table
-archived_directly: false
-entity_id: Y6d2GVD_f_WVgrGdqkGHg
-collection_preview: true
+  lib/deduplicated-name: created_at
+  lib/desired-column-alias: created_at
+  lib/original-display-name: Created At
+  lib/original-name: created_at
+  lib/source: source/table-defaults
+  lib/source-column-alias: created_at
+  qp/implicit-field?: true
 visualization_settings:
   column_settings: null
-metabase_version: v1.57.5.5 (665a201)
-parameters: []
+card_schema: 23
+serdes/meta:
+- id: Y6d2GVD_f_WVgrGdqkGHg
+  label: users
+  model: Card
+archived_directly: false
 dashboard_id: null
-created_at: '2025-12-08T19:28:58.062319Z'
-public_uuid: null
+document_id: null
+metabase_version: v1.57.5.5 (665a201)
+source_card_id: null
+type: question

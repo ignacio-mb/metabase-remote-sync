@@ -1,18 +1,18 @@
-authority_level: null
-description: null
-archived: false
-slug: sample
-archive_operation_id: null
 name: sample
-personal_owner_id: null
-type: remote-synced
-is_sample: false
-parent_id: efBYjIx2Gnqs_n1THME3Q
-serdes/meta:
-- model: Collection
-  id: EGpXHxLYxLGPqRFqY6bJC
-  label: sample
-archived_directly: null
+description: null
 entity_id: EGpXHxLYxLGPqRFqY6bJC
-namespace: null
+slug: sample
 created_at: '2025-12-08T19:18:56.964234Z'
+archived: false
+type: remote-synced
+parent_id: efBYjIx2Gnqs_n1THME3Q
+personal_owner_id: null
+namespace: null
+authority_level: null
+serdes/meta:
+- id: EGpXHxLYxLGPqRFqY6bJC
+  label: sample
+  model: Collection
+archive_operation_id: null
+archived_directly: null
+is_sample: false

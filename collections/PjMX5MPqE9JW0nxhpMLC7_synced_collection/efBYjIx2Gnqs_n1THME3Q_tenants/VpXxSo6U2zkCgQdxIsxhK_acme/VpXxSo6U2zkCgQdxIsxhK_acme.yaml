@@ -1,18 +1,18 @@
-authority_level: null
-description: null
-archived: false
-slug: acme
-archive_operation_id: null
 name: acme
-personal_owner_id: null
-type: remote-synced
-is_sample: false
-parent_id: efBYjIx2Gnqs_n1THME3Q
-serdes/meta:
-- model: Collection
-  id: VpXxSo6U2zkCgQdxIsxhK
-  label: acme
-archived_directly: null
+description: null
 entity_id: VpXxSo6U2zkCgQdxIsxhK
-namespace: null
+slug: acme
 created_at: '2025-12-08T19:23:47.775724Z'
+archived: false
+type: remote-synced
+parent_id: efBYjIx2Gnqs_n1THME3Q
+personal_owner_id: null
+namespace: null
+authority_level: null
+serdes/meta:
+- id: VpXxSo6U2zkCgQdxIsxhK
+  label: acme
+  model: Collection
+archive_operation_id: null
+archived_directly: null
+is_sample: false
