@@ -4,7 +4,7 @@ entity_id: kjZC-Cqa5yHXYSaGdmyGL
 slug: non_sample
 created_at: '2025-12-08T19:21:25.038532Z'
 archived: false
-type: remote-synced
+type: null
 parent_id: efBYjIx2Gnqs_n1THME3Q
 personal_owner_id: null
 namespace: null
@@ -15,4 +15,5 @@ serdes/meta:
   model: Collection
 archive_operation_id: null
 archived_directly: null
+is_remote_synced: true
 is_sample: false

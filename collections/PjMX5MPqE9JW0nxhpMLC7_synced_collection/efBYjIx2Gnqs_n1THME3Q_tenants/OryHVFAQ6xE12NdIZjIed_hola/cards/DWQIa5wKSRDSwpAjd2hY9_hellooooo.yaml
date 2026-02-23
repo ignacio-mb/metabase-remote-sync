@@ -105,6 +105,7 @@ serdes/meta:
 archived_directly: false
 dashboard_id: null
 document_id: null
+embedding_type: null
 metabase_version: v1.57.7.1 (ff735a6)
 source_card_id: null
 type: question

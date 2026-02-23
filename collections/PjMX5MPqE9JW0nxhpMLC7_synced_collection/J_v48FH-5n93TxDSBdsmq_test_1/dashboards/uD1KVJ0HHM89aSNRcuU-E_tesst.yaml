@@ -1,0 +1,137 @@
+name: tesst
+description: null
+entity_id: uD1KVJ0HHM89aSNRcuU-E
+created_at: '2026-02-23T15:10:29.295861Z'
+creator_id: ignacio@metabase.com
+archived: false
+collection_id: J_v48FH-5n93TxDSBdsmq
+auto_apply_filters: true
+collection_position: null
+position: null
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+show_in_getting_started: false
+caveats: null
+points_of_interest: null
+parameters:
+- id: 1d534070
+  name: Number
+  sectionId: number
+  slug: number
+  type: number/=
+- id: 210cebde
+  name: Location
+  sectionId: location
+  slug: location
+  type: string/=
+- id: 2e6c1f36
+  name: Date
+  sectionId: date
+  slug: date
+  type: date/all-options
+- id: 34ae61f
+  name: ID
+  sectionId: id
+  slug: id
+  type: id
+- id: b1d429de
+  name: Text
+  sectionId: string
+  slug: text
+  type: string/=
+- id: c1b94fef
+  name: Number 1
+  sectionId: number
+  slug: number_1
+  type: number/=
+serdes/meta:
+- id: uD1KVJ0HHM89aSNRcuU-E
+  label: tesst
+  model: Dashboard
+archived_directly: false
+dashcards:
+- entity_id: jRY6uKWiNP1Uu_5ghAwV2
+  card_id: SAawPbAVGU1f2oU7bIcoM
+  created_at: '2026-02-23T15:10:37.379074Z'
+  row: 0
+  col: 0
+  size_x: 12
+  size_y: 9
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: SAawPbAVGU1f2oU7bIcoM
+    parameter_id: 1d534070
+    target:
+    - dimension
+    - - field
+      - - Sample Database
+        - PUBLIC
+        - ORDERS
+        - SUBTOTAL
+      - base-type: type/Float
+    - stage-number: 0
+  - card_id: SAawPbAVGU1f2oU7bIcoM
+    parameter_id: 2e6c1f36
+    target:
+    - dimension
+    - - field
+      - - Sample Database
+        - PUBLIC
+        - ORDERS
+        - CREATED_AT
+      - base-type: type/DateTime
+    - stage-number: 0
+  - card_id: SAawPbAVGU1f2oU7bIcoM
+    parameter_id: 34ae61f
+    target:
+    - dimension
+    - - field
+      - - Sample Database
+        - PUBLIC
+        - ORDERS
+        - ID
+      - base-type: type/BigInteger
+    - stage-number: 0
+  - card_id: SAawPbAVGU1f2oU7bIcoM
+    parameter_id: b1d429de
+    target:
+    - dimension
+    - - field
+      - - Sample Database
+        - PUBLIC
+        - PRODUCTS
+        - EAN
+      - base-type: type/Text
+        source-field:
+        - Sample Database
+        - PUBLIC
+        - ORDERS
+        - PRODUCT_ID
+    - stage-number: 0
+  - card_id: SAawPbAVGU1f2oU7bIcoM
+    parameter_id: c1b94fef
+    target:
+    - dimension
+    - - field
+      - - Sample Database
+        - PUBLIC
+        - ORDERS
+        - QUANTITY
+      - base-type: type/Integer
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: uD1KVJ0HHM89aSNRcuU-E
+    model: Dashboard
+  - id: jRY6uKWiNP1Uu_5ghAwV2
+    model: DashboardCard
+embedding_type: null
+initially_published_at: null
+tabs: []
+width: fixed
