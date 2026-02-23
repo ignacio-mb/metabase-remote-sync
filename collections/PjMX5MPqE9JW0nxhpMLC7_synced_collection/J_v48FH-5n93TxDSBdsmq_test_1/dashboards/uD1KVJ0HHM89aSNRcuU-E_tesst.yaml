@@ -36,16 +36,51 @@ parameters:
   sectionId: id
   slug: id
   type: id
+- id: 87a3150c
+  name: Boolean
+  sectionId: boolean
+  slug: boolean
+  type: boolean/=
+- id: 8d834945
+  name: Text 5
+  sectionId: string
+  slug: text_5
+  type: string/=
+- id: 94464cbb
+  name: ID 1
+  sectionId: id
+  slug: id_1
+  type: id
+- id: a19fbedb
+  name: Text 2
+  sectionId: string
+  slug: text_2
+  type: string/=
 - id: b1d429de
   name: Text
   sectionId: string
   slug: text
+  type: string/=
+- id: b1fbe889
+  name: Text 1
+  sectionId: string
+  slug: text_1
   type: string/=
 - id: c1b94fef
   name: Number 1
   sectionId: number
   slug: number_1
   type: number/=
+- id: e1cf3216
+  name: Text 4
+  sectionId: string
+  slug: text_4
+  type: string/=
+- id: fdcf9783
+  name: Text 3
+  sectionId: string
+  slug: text_3
+  type: string/=
 serdes/meta:
 - id: uD1KVJ0HHM89aSNRcuU-E
   label: tesst
@@ -97,7 +132,66 @@ dashcards:
       - base-type: type/BigInteger
     - stage-number: 0
   - card_id: SAawPbAVGU1f2oU7bIcoM
+    parameter_id: 8d834945
+    target:
+    - dimension
+    - - field
+      - - Sample Database
+        - PUBLIC
+        - PRODUCTS
+        - EAN
+      - base-type: type/Text
+        source-field:
+        - Sample Database
+        - PUBLIC
+        - ORDERS
+        - PRODUCT_ID
+    - stage-number: 0
+  - card_id: SAawPbAVGU1f2oU7bIcoM
+    parameter_id: 94464cbb
+    target:
+    - dimension
+    - - field
+      - - Sample Database
+        - PUBLIC
+        - ORDERS
+        - ID
+      - base-type: type/BigInteger
+    - stage-number: 0
+  - card_id: SAawPbAVGU1f2oU7bIcoM
+    parameter_id: a19fbedb
+    target:
+    - dimension
+    - - field
+      - - Sample Database
+        - PUBLIC
+        - PEOPLE
+        - ADDRESS
+      - base-type: type/Text
+        source-field:
+        - Sample Database
+        - PUBLIC
+        - ORDERS
+        - USER_ID
+    - stage-number: 0
+  - card_id: SAawPbAVGU1f2oU7bIcoM
     parameter_id: b1d429de
+    target:
+    - dimension
+    - - field
+      - - Sample Database
+        - PUBLIC
+        - PRODUCTS
+        - EAN
+      - base-type: type/Text
+        source-field:
+        - Sample Database
+        - PUBLIC
+        - ORDERS
+        - PRODUCT_ID
+    - stage-number: 0
+  - card_id: SAawPbAVGU1f2oU7bIcoM
+    parameter_id: b1fbe889
     target:
     - dimension
     - - field
@@ -122,6 +216,38 @@ dashcards:
         - ORDERS
         - QUANTITY
       - base-type: type/Integer
+    - stage-number: 0
+  - card_id: SAawPbAVGU1f2oU7bIcoM
+    parameter_id: e1cf3216
+    target:
+    - dimension
+    - - field
+      - - Sample Database
+        - PUBLIC
+        - PEOPLE
+        - SOURCE
+      - base-type: type/Text
+        source-field:
+        - Sample Database
+        - PUBLIC
+        - ORDERS
+        - USER_ID
+    - stage-number: 0
+  - card_id: SAawPbAVGU1f2oU7bIcoM
+    parameter_id: fdcf9783
+    target:
+    - dimension
+    - - field
+      - - Sample Database
+        - PUBLIC
+        - PRODUCTS
+        - CATEGORY
+      - base-type: type/Text
+        source-field:
+        - Sample Database
+        - PUBLIC
+        - ORDERS
+        - PRODUCT_ID
     - stage-number: 0
   series: []
   visualization_settings:
