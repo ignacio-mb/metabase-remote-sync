@@ -1,0 +1,47 @@
+name: dashbaord 1
+description: null
+entity_id: xCB0-ivEvetDTFIupLiRR
+created_at: '2026-03-02T14:10:48.922528Z'
+creator_id: ignacio@metabase.com
+archived: false
+collection_id: PjMX5MPqE9JW0nxhpMLC7
+auto_apply_filters: true
+collection_position: null
+position: null
+enable_embedding: false
+embedding_params: null
+made_public_by_id: null
+public_uuid: null
+show_in_getting_started: false
+caveats: null
+points_of_interest: null
+parameters: []
+serdes/meta:
+- id: xCB0-ivEvetDTFIupLiRR
+  label: dashbaord_1
+  model: Dashboard
+archived_directly: false
+dashcards:
+- entity_id: o47OYc3BokdAlNHDMgID6
+  card_id: 6YMH4OcrOE-Cp7gVhflX4
+  created_at: '2026-03-02T14:10:52.850118Z'
+  row: 0
+  col: 0
+  size_x: 12
+  size_y: 9
+  action_id: null
+  dashboard_tab_id: null
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: xCB0-ivEvetDTFIupLiRR
+    model: Dashboard
+  - id: o47OYc3BokdAlNHDMgID6
+    model: DashboardCard
+embedding_type: null
+initially_published_at: null
+tabs: []
+width: fixed
