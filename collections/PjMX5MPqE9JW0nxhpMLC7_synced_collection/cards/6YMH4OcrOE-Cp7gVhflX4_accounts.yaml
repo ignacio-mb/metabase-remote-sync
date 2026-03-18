@@ -7,7 +7,7 @@ display: table
 archived: false
 collection_id: PjMX5MPqE9JW0nxhpMLC7
 collection_preview: true
-collection_position: null
+collection_position: 1
 query_type: query
 database_id: Sample Database
 table_id:
@@ -114,7 +114,7 @@ result_metadata:
   - FIRST_NAME
   name: FIRST_NAME
   position: 2
-  semantic_type: type/Category
+  semantic_type: type/Description
   source: fields
   table_id:
   - Sample Database
@@ -131,6 +131,7 @@ result_metadata:
 - active: true
   base_type: type/Text
   database_type: CHARACTER VARYING
+  description: ' '
   display_name: Last Name
   effective_type: type/Text
   field_ref:
@@ -559,6 +560,8 @@ result_metadata:
   qp/implicit-field?: true
 visualization_settings:
   column_settings: null
+  table.cell_column: SEATS
+  table.pivot_column: TRIAL_CONVERTED
 card_schema: 23
 serdes/meta:
 - id: 6YMH4OcrOE-Cp7gVhflX4
@@ -570,4 +573,4 @@ document_id: null
 embedding_type: null
 metabase_version: v1.58.7 (85988ba)
 source_card_id: null
-type: question
+type: model
