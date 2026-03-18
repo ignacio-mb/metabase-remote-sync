@@ -18,66 +18,79 @@ points_of_interest: null
 parameters:
 - id: 1d534070
   name: Number
+  position: 1
   sectionId: number
   slug: number
   type: number/=
 - id: 210cebde
   name: Location
+  position: 3
   sectionId: location
   slug: location
   type: string/=
 - id: 2e6c1f36
   name: Date
+  position: 0
   sectionId: date
   slug: date
   type: date/all-options
 - id: 34ae61f
   name: ID
+  position: 2
   sectionId: id
   slug: id
   type: id
 - id: 87a3150c
   name: Boolean
+  position: 11
   sectionId: boolean
   slug: boolean
   type: boolean/=
 - id: 8d834945
   name: Text 5
+  position: 12
   sectionId: string
   slug: text_5
   type: string/=
 - id: 94464cbb
   name: ID 1
+  position: 6
   sectionId: id
   slug: id_1
   type: id
 - id: a19fbedb
   name: Text 2
+  position: 8
   sectionId: string
   slug: text_2
   type: string/=
 - id: b1d429de
   name: Text
+  position: 4
   sectionId: string
   slug: text
   type: string/=
 - id: b1fbe889
   name: Text 1
+  position: 7
   sectionId: string
   slug: text_1
   type: string/=
 - id: c1b94fef
   name: Number 1
+  position: 5
   sectionId: number
   slug: number_1
   type: number/=
 - id: e1cf3216
   name: Text 4
+  position: 10
   sectionId: string
   slug: text_4
   type: string/=
 - id: fdcf9783
   name: Text 3
+  position: 9
   sectionId: string
   slug: text_3
   type: string/=
