@@ -1,0 +1,26 @@
+collection_id: null
+created_at: '2026-03-20T18:36:12.046509Z'
+creator_id: ignacio@metabase.com
+description: null
+entity_id: -ZOTEkxckUrQTi7yISK6w
+name: testy
+owner_email: null
+owner_user_id: ignacio@metabase.com
+source:
+  query:
+    database: postgres
+    native:
+      query: select 1
+    type: native
+  type: query
+source_database_id: postgres
+tags: []
+target:
+  database: postgres
+  name: testy
+  schema: auth
+  type: table
+serdes/meta:
+- id: -ZOTEkxckUrQTi7yISK6w
+  label: testy
+  model: Transform
