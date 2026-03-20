@@ -1,0 +1,29 @@
+collection_id: null
+created_at: '2026-03-20T18:31:47.3718Z'
+creator_id: ignacio@metabase.com
+description: null
+entity_id: 36LA0OUhiAqdAHx8KFbZU
+name: test
+owner_email: null
+owner_user_id: ignacio@metabase.com
+source:
+  query:
+    database: postgres
+    query:
+      source-table:
+      - postgres
+      - public
+      - People
+    type: query
+  type: query
+source_database_id: postgres
+tags: []
+target:
+  database: postgres
+  name: test
+  schema: auth
+  type: table
+serdes/meta:
+- id: 36LA0OUhiAqdAHx8KFbZU
+  label: test
+  model: Transform

@@ -1,0 +1,26 @@
+collection_id: null
+created_at: '2026-03-20T18:38:44.280351Z'
+creator_id: ignacio@metabase.com
+description: null
+entity_id: o_SLLlyHrPaR-Qo7nRWuN
+name: select 1
+owner_email: null
+owner_user_id: ignacio@metabase.com
+source:
+  query:
+    database: random interesting...
+    native:
+      query: select 1
+    type: native
+  type: query
+source_database_id: random interesting...
+tags: []
+target:
+  database: random interesting...
+  name: select_1
+  schema: mb__isolation_0c4b1_487
+  type: table
+serdes/meta:
+- id: o_SLLlyHrPaR-Qo7nRWuN
+  label: select_1
+  model: Transform
