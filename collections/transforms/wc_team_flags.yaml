@@ -1,0 +1,75 @@
+created_at: '2026-06-10T16:28:04.650845Z'
+creator_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+description: Flag emoji per 2026 World Cup team, plus a 'flag + name' display label.
+entity_id: Xr1QQI8yLQtsep-B_Efiq
+name: wc_team_flags
+owner_user_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+source:
+  query:
+    database: Dirty Warehouse
+    stages:
+    - native: |
+        SELECT team, flag, flag || ' ' || team AS team_label FROM (VALUES
+          ('Mexico','🇲🇽'),
+          ('South Africa','🇿🇦'),
+          ('South Korea','🇰🇷'),
+          ('Czech Republic','🇨🇿'),
+          ('Canada','🇨🇦'),
+          ('Bosnia & Herzegovina','🇧🇦'),
+          ('Qatar','🇶🇦'),
+          ('Switzerland','🇨🇭'),
+          ('Brazil','🇧🇷'),
+          ('Haiti','🇭🇹'),
+          ('Morocco','🇲🇦'),
+          ('Scotland','🏴󠁧󠁢󠁳󠁣󠁴󠁿'),
+          ('Australia','🇦🇺'),
+          ('Paraguay','🇵🇾'),
+          ('Turkey','🇹🇷'),
+          ('USA','🇺🇸'),
+          ('Curaçao','🇨🇼'),
+          ('Ecuador','🇪🇨'),
+          ('Germany','🇩🇪'),
+          ('Ivory Coast','🇨🇮'),
+          ('Japan','🇯🇵'),
+          ('Netherlands','🇳🇱'),
+          ('Sweden','🇸🇪'),
+          ('Tunisia','🇹🇳'),
+          ('Belgium','🇧🇪'),
+          ('Egypt','🇪🇬'),
+          ('Iran','🇮🇷'),
+          ('New Zealand','🇳🇿'),
+          ('Cape Verde','🇨🇻'),
+          ('Saudi Arabia','🇸🇦'),
+          ('Spain','🇪🇸'),
+          ('Uruguay','🇺🇾'),
+          ('France','🇫🇷'),
+          ('Iraq','🇮🇶'),
+          ('Norway','🇳🇴'),
+          ('Senegal','🇸🇳'),
+          ('Algeria','🇩🇿'),
+          ('Argentina','🇦🇷'),
+          ('Austria','🇦🇹'),
+          ('Jordan','🇯🇴'),
+          ('Colombia','🇨🇴'),
+          ('DR Congo','🇨🇩'),
+          ('Portugal','🇵🇹'),
+          ('Uzbekistan','🇺🇿'),
+          ('Croatia','🇭🇷'),
+          ('England','🏴󠁧󠁢󠁥󠁮󠁧󠁿'),
+          ('Ghana','🇬🇭'),
+          ('Panama','🇵🇦')
+        ) AS t(team, flag)
+      lib/type: mbql.stage/native
+    lib/type: mbql/query
+  type: query
+source_database_id: Dirty Warehouse
+tags: []
+target:
+  database: Dirty Warehouse
+  name: wc_team_flags
+  schema: public
+  type: table
+serdes/meta:
+- id: Xr1QQI8yLQtsep-B_Efiq
+  label: wc_team_flags
+  model: Transform

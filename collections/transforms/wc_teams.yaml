@@ -1,0 +1,82 @@
+created_at: '2026-06-10T15:57:01.843525Z'
+creator_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+description: '2026 World Cup teams: all 48 qualified teams with group, confederation, FIFA rank/points, and past World Cup titles.'
+entity_id: 4aGqviTHcKpohLx5rwbyq
+name: wc_teams
+owner_user_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+source:
+  query:
+    database: Dirty Warehouse
+    stages:
+    - native: |
+        SELECT
+          team,
+          group_name,
+          confederation,
+          fifa_rank::int                          AS fifa_rank,
+          fifa_points::numeric                     AS fifa_points,
+          world_cup_titles::int                    AS world_cup_titles
+        FROM (VALUES
+          ('Mexico','Group A','CONCACAF',14,1687.48,0),
+          ('South Africa','Group A','CAF',60,NULL,0),
+          ('South Korea','Group A','AFC',25,1591.63,0),
+          ('Czech Republic','Group A','UEFA',39,1505.74,0),
+          ('Canada','Group B','CONCACAF',30,1559.48,0),
+          ('Bosnia & Herzegovina','Group B','UEFA',64,NULL,0),
+          ('Qatar','Group B','AFC',57,NULL,0),
+          ('Switzerland','Group B','UEFA',19,1650.07,0),
+          ('Brazil','Group C','CONMEBOL',6,1765.86,5),
+          ('Haiti','Group C','CONCACAF',83,NULL,0),
+          ('Morocco','Group C','CAF',7,1755.44,0),
+          ('Scotland','Group C','UEFA',42,1503.34,0),
+          ('Australia','Group D','AFC',27,1579.34,0),
+          ('Paraguay','Group D','CONMEBOL',40,1505.35,0),
+          ('Turkey','Group D','UEFA',22,1605.73,0),
+          ('USA','Group D','CONCACAF',17,1671.24,0),
+          ('Curaçao','Group E','CONCACAF',82,NULL,0),
+          ('Ecuador','Group E','CONMEBOL',23,1598.51,0),
+          ('Germany','Group E','UEFA',10,1735.77,4),
+          ('Ivory Coast','Group E','CAF',33,1540.87,0),
+          ('Japan','Group F','AFC',18,1661.58,0),
+          ('Netherlands','Group F','UEFA',8,1753.57,0),
+          ('Sweden','Group F','UEFA',38,1509.79,0),
+          ('Tunisia','Group F','CAF',46,1476.40,0),
+          ('Belgium','Group G','UEFA',9,1742.23,0),
+          ('Egypt','Group G','CAF',29,1562.37,0),
+          ('Iran','Group G','AFC',21,1619.58,0),
+          ('New Zealand','Group G','OFC',85,NULL,0),
+          ('Cape Verde','Group H','CAF',67,NULL,0),
+          ('Saudi Arabia','Group H','AFC',61,NULL,0),
+          ('Spain','Group H','UEFA',2,1873.87,1),
+          ('Uruguay','Group H','CONMEBOL',16,1673.07,2),
+          ('France','Group I','UEFA',3,1870.69,2),
+          ('Iraq','Group I','AFC',56,NULL,0),
+          ('Norway','Group I','UEFA',31,1557.44,0),
+          ('Senegal','Group I','CAF',15,1685.24,0),
+          ('Algeria','Group J','CAF',28,1571.04,0),
+          ('Argentina','Group J','CONMEBOL',1,1876.11,3),
+          ('Austria','Group J','UEFA',24,1597.41,0),
+          ('Jordan','Group J','AFC',63,NULL,0),
+          ('Colombia','Group K','CONMEBOL',13,1698.35,0),
+          ('DR Congo','Group K','CAF',45,1477.06,0),
+          ('Portugal','Group K','UEFA',5,1766.17,0),
+          ('Uzbekistan','Group K','AFC',50,1458.73,0),
+          ('Croatia','Group L','UEFA',11,1714.87,0),
+          ('England','Group L','UEFA',4,1827.05,1),
+          ('Ghana','Group L','CAF',73,NULL,0),
+          ('Panama','Group L','CONCACAF',34,1539.15,0)
+        ) AS t(team, group_name, confederation, fifa_rank, fifa_points, world_cup_titles)
+      lib/type: mbql.stage/native
+    lib/type: mbql/query
+  type: query
+source_database_id: Dirty Warehouse
+tags: []
+target:
+  database: Dirty Warehouse
+  name: wc_teams
+  schema: public
+  type: table
+serdes/meta:
+- id: 4aGqviTHcKpohLx5rwbyq
+  label: wc_teams
+  model: Transform

@@ -1,0 +1,37 @@
+created_at: '2026-06-10T16:29:18.134259Z'
+creator_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+description: 'Actual group-stage results: real fixtures with goals NULL until played. Update goals1/goals2/is_final as matches finish; do not re-run (it resets scores).'
+entity_id: WLo6QDN0EiUJ_9GCcuhom
+name: wc_results
+owner_user_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+source:
+  query:
+    database: Dirty Warehouse
+    stages:
+    - native: |
+        SELECT
+          m.match_no,
+          m.group_name,
+          m.match_date,
+          m.team1,
+          m.team2,
+          CAST(NULL AS integer) AS goals1,
+          CAST(NULL AS integer) AS goals2,
+          false                 AS is_final
+        FROM public.wc_matches m
+        WHERE m.stage = 'Group Stage'
+        ORDER BY m.match_no
+      lib/type: mbql.stage/native
+    lib/type: mbql/query
+  type: query
+source_database_id: Dirty Warehouse
+tags: []
+target:
+  database: Dirty Warehouse
+  name: wc_results
+  schema: public
+  type: table
+serdes/meta:
+- id: WLo6QDN0EiUJ_9GCcuhom
+  label: wc_results
+  model: Transform

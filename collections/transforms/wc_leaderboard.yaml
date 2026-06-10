@@ -1,0 +1,35 @@
+created_at: '2026-06-10T16:29:24.542626Z'
+creator_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+description: 'Prode leaderboard: total points, exact scores, and correct outcomes per user, ranked.'
+entity_id: DGNvFB-FXYdk2xzZTcS75
+name: wc_leaderboard
+owner_user_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+source:
+  query:
+    database: Dirty Warehouse
+    stages:
+    - native: |
+        SELECT
+          username,
+          count(*) FILTER (WHERE points IS NOT NULL)  AS matches_scored,
+          count(*) FILTER (WHERE points = 5)          AS exact_scores,
+          count(*) FILTER (WHERE points = 3)          AS correct_outcomes,
+          coalesce(sum(points), 0)                    AS total_points,
+          rank() OVER (ORDER BY coalesce(sum(points), 0) DESC) AS rank
+        FROM public.wc_prediction_scores
+        GROUP BY username
+        ORDER BY total_points DESC
+      lib/type: mbql.stage/native
+    lib/type: mbql/query
+  type: query
+source_database_id: Dirty Warehouse
+tags: []
+target:
+  database: Dirty Warehouse
+  name: wc_leaderboard
+  schema: public
+  type: table
+serdes/meta:
+- id: DGNvFB-FXYdk2xzZTcS75
+  label: wc_leaderboard
+  model: Transform

@@ -1,0 +1,48 @@
+created_at: '2026-06-10T15:57:06.138933Z'
+creator_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+description: '2026 World Cup venues: the 16 host stadiums with city, country, and capacity.'
+entity_id: RZp1nOuL8aeeEew52Cz3N
+name: wc_venues
+owner_user_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+source:
+  query:
+    database: Dirty Warehouse
+    stages:
+    - native: |
+        SELECT
+          ground,
+          stadium,
+          country,
+          capacity::int AS capacity
+        FROM (VALUES
+          ('Atlanta','Mercedes-Benz Stadium','USA',75000),
+          ('Boston (Foxborough)','Gillette Stadium','USA',65000),
+          ('Dallas (Arlington)','AT&T Stadium','USA',94000),
+          ('Guadalajara (Zapopan)','Estadio Akron','Mexico',48000),
+          ('Houston','NRG Stadium','USA',72000),
+          ('Kansas City','Arrowhead Stadium','USA',73000),
+          ('Los Angeles (Inglewood)','SoFi Stadium','USA',70000),
+          ('Mexico City','Estadio Azteca','Mexico',83000),
+          ('Miami (Miami Gardens)','Hard Rock Stadium','USA',65000),
+          ('Monterrey (Guadalupe)','Estadio BBVA','Mexico',53500),
+          ('New York/New Jersey (East Rutherford)','MetLife Stadium','USA',82500),
+          ('Philadelphia','Lincoln Financial Field','USA',69000),
+          ('San Francisco Bay Area (Santa Clara)','Levi''s Stadium','USA',71000),
+          ('Seattle','Lumen Field','USA',69000),
+          ('Toronto','BMO Field','Canada',45000),
+          ('Vancouver','BC Place','Canada',54000)
+        ) AS v(ground, stadium, country, capacity)
+      lib/type: mbql.stage/native
+    lib/type: mbql/query
+  type: query
+source_database_id: Dirty Warehouse
+tags: []
+target:
+  database: Dirty Warehouse
+  name: wc_venues
+  schema: public
+  type: table
+serdes/meta:
+- id: RZp1nOuL8aeeEew52Cz3N
+  label: wc_venues
+  model: Transform
