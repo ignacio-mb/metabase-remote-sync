@@ -1,0 +1,55 @@
+created_at: '2026-06-10T12:57:50.038746Z'
+creator_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+description: One row per answer value to a sign-up question (multi-selects exploded so each choice is filterable), decoded with the question text and joined to the registration's person and event.
+entity_id: 4uO2oq0fn9XK_ynMRXf_T
+name: registration_answers
+owner_user_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+source:
+  query:
+    database: Dirty Warehouse
+    stages:
+    - native: |
+        WITH base AS (
+          SELECT cr.reg_id, cr.answer, f.question, f.field_type
+          FROM events.evt_custom_responses cr
+          JOIN events.evt_custom_fields f ON cr.field_key = f.field_key
+          WHERE nullif(btrim(cr.answer), '') IS NOT NULL
+            AND btrim(cr.answer) <> 'null'
+        ),
+        exploded AS (
+          SELECT b.reg_id, b.question, b.field_type, elem ->> 'value' AS answer_value
+          FROM base b
+          CROSS JOIN LATERAL jsonb_array_elements(b.answer::jsonb) AS elem
+          WHERE b.field_type = 'multi'
+          UNION ALL
+          SELECT b.reg_id, b.question, b.field_type, b.answer::jsonb ->> 'value' AS answer_value
+          FROM base b
+          WHERE b.field_type IN ('single', 'text')
+        )
+        SELECT
+          x.reg_id,
+          r.person_id,
+          r.person_name,
+          r.event_id,
+          r.event_title,
+          r.event_category,
+          x.question,
+          x.field_type                                            AS question_type,
+          btrim(x.answer_value)                                   AS answer
+        FROM exploded x
+        LEFT JOIN public.registrations r ON x.reg_id = r.reg_id
+        WHERE nullif(btrim(x.answer_value), '') IS NOT NULL
+      lib/type: mbql.stage/native
+    lib/type: mbql/query
+  type: query
+source_database_id: Dirty Warehouse
+tags: []
+target:
+  database: Dirty Warehouse
+  name: registration_answers
+  schema: public
+  type: table
+serdes/meta:
+- id: 4uO2oq0fn9XK_ynMRXf_T
+  label: registration_answers
+  model: Transform

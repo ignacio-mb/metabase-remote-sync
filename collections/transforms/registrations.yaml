@@ -1,0 +1,59 @@
+created_at: '2026-06-10T12:57:18.75132Z'
+creator_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+description: 'One row per registration: who registered for which event, with normalized status and check-in, plus event/person/customer labels. event_deleted flags sign-ups for removed events.'
+entity_id: 5oLAgz0JybC1vLHoP4m10
+name: registrations
+owner_user_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+source:
+  query:
+    database: Dirty Warehouse
+    stages:
+    - native: |
+        SELECT
+          r.reg_id,
+          r.event_id,
+          btrim(e.title)                                          AS event_title,
+          c.label                                                 AS event_category,
+          ce.starts_on                                            AS event_starts_on,
+          coalesce(e._deleted, false)                             AS event_deleted,
+          r.person_ref                                            AS person_id,
+          pe.full_name                                            AS person_name,
+          pe.email                                                AS person_email,
+          pe.company_name,
+          pe.company_tier,
+          pe.lifecycle_stage,
+          CASE
+            WHEN r.registered_at ~ '^\d{4}-\d{2}-\d{2}T'  THEN (r.registered_at::timestamptz)::date
+            WHEN r.registered_at ~ '^\d{4}-\d{2}-\d{2}$'  THEN to_date(r.registered_at, 'YYYY-MM-DD')
+            WHEN r.registered_at ~ '^\d{2}/\d{2}/\d{4}$'  THEN to_date(r.registered_at, 'MM/DD/YYYY')
+            WHEN r.registered_at ~ '^\d{4}/\d{2}/\d{2}$'  THEN to_date(r.registered_at, 'YYYY/MM/DD')
+            WHEN r.registered_at ~ '^\d{2}-[A-Za-z]{3}-\d{4}$' THEN to_date(r.registered_at, 'DD-Mon-YYYY')
+            ELSE NULL
+          END                                                     AS registered_on,
+          CASE lower(btrim(r.status))
+            WHEN 'going' THEN 'Going'
+            WHEN 'waitlist' THEN 'Waitlist'
+            WHEN 'cancelled' THEN 'Cancelled'
+            ELSE initcap(btrim(r.status)) END                     AS status,
+          CASE WHEN btrim(r.checked_in) IN ('1','Y','y','true','TRUE','yes','Yes') THEN true
+               WHEN btrim(r.checked_in) IN ('0','','N','n','false','no') THEN false
+               ELSE NULL END                                      AS checked_in
+        FROM events.evt_registrations r
+        LEFT JOIN events.evt_events e         ON r.event_id = e.event_id
+        LEFT JOIN events.evt_categories c     ON e.category_code = c.code
+        LEFT JOIN public.events ce            ON r.event_id = ce.event_id
+        LEFT JOIN public.people pe            ON r.person_ref = pe.person_id
+      lib/type: mbql.stage/native
+    lib/type: mbql/query
+  type: query
+source_database_id: Dirty Warehouse
+tags: []
+target:
+  database: Dirty Warehouse
+  name: registrations
+  schema: public
+  type: table
+serdes/meta:
+- id: 5oLAgz0JybC1vLHoP4m10
+  label: registrations
+  model: Transform

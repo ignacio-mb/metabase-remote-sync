@@ -1,0 +1,49 @@
+created_at: '2026-06-10T12:55:09.735884Z'
+creator_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+description: 'Clean events (excludes deleted): one row per event with decoded category, flattened venue, normalized date/capacity/published.'
+entity_id: H1odv5h31TP4jM8p-zfUc
+name: events
+owner_user_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+source:
+  query:
+    database: Dirty Warehouse
+    stages:
+    - native: |
+        SELECT
+          e.event_id,
+          btrim(e.title)                                          AS title,
+          c.label                                                 AS category,
+          e.category_code,
+          CASE
+            WHEN e.starts_at ~ '^\d{4}-\d{2}-\d{2}T'  THEN (e.starts_at::timestamptz)::date
+            WHEN e.starts_at ~ '^\d{4}-\d{2}-\d{2}$'  THEN to_date(e.starts_at, 'YYYY-MM-DD')
+            WHEN e.starts_at ~ '^\d{2}/\d{2}/\d{4}$'  THEN to_date(e.starts_at, 'MM/DD/YYYY')
+            WHEN e.starts_at ~ '^\d{4}/\d{2}/\d{2}$'  THEN to_date(e.starts_at, 'YYYY/MM/DD')
+            WHEN e.starts_at ~ '^\d{2}-[A-Za-z]{3}-\d{4}$' THEN to_date(e.starts_at, 'DD-Mon-YYYY')
+            ELSE NULL
+          END                                                     AS starts_on,
+          nullif(e.venue::jsonb ->> 'name', '')                   AS venue_name,
+          nullif(e.venue::jsonb ->> 'city', '')                   AS venue_city,
+          nullif(e.venue::jsonb ->> 'country', '')                AS venue_country,
+          CASE WHEN e.capacity ~ '^\d+$' THEN e.capacity::int ELSE NULL END AS capacity,
+          CASE WHEN lower(btrim(e.is_published)) IN ('y','true','yes','1') THEN true
+               WHEN lower(btrim(e.is_published)) IN ('n','false','no','0') THEN false
+               ELSE NULL END                                      AS is_published,
+          lower(btrim(e.host_email))                              AS host_email
+        FROM events.evt_events e
+        LEFT JOIN events.evt_categories c ON e.category_code = c.code
+        WHERE coalesce(e._deleted, false) = false
+      lib/type: mbql.stage/native
+    lib/type: mbql/query
+  type: query
+source_database_id: Dirty Warehouse
+tags: []
+target:
+  database: Dirty Warehouse
+  name: events
+  schema: public
+  type: table
+serdes/meta:
+- id: H1odv5h31TP4jM8p-zfUc
+  label: events
+  model: Transform

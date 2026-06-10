@@ -1,0 +1,344 @@
+name: Customer & Event Registration Overview
+description: Who registered, how registrations trend, event analytics, customer breakdowns, and sign-up responses.
+entity_id: OGjiqoKB5a1SIJTdburEA
+created_at: '2026-06-10T13:06:42.714204Z'
+creator_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+collection_id: kvB2C7V6imMbqXv5duXEz
+parameters: []
+serdes/meta:
+- id: OGjiqoKB5a1SIJTdburEA
+  label: customer___event_registration_overview
+  model: Dashboard
+dashcards:
+- entity_id: CuLW05Cs1-SdmfufzRV3R
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 0
+  col: 0
+  size_x: 24
+  size_y: 1
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    text: Key numbers Test
+    virtual_card:
+      archived: false
+      dataset_query: {}
+      display: heading
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: CuLW05Cs1-SdmfufzRV3R
+    model: DashboardCard
+- entity_id: _w6fKGrSXNDLpP8Ib69-y
+  card_id: pMIWtmHItvnReuKjFRQ1g
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 1
+  col: 0
+  size_x: 5
+  size_y: 3
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: _w6fKGrSXNDLpP8Ib69-y
+    model: DashboardCard
+- entity_id: hrTexY1u6UlKJ51k2WaKJ
+  card_id: 1TSFAVMcXAricSx7fIDbm
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 1
+  col: 5
+  size_x: 5
+  size_y: 3
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: hrTexY1u6UlKJ51k2WaKJ
+    model: DashboardCard
+- entity_id: FRU1oCczPY166sd_S_pVl
+  card_id: KBawfVr0VW6ykujBwf57X
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 1
+  col: 10
+  size_x: 5
+  size_y: 3
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: FRU1oCczPY166sd_S_pVl
+    model: DashboardCard
+- entity_id: wxomy0DjUMBQyqdHT4IP7
+  card_id: uJyMfo4blATZICLgD1Rc_
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 1
+  col: 15
+  size_x: 5
+  size_y: 3
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: wxomy0DjUMBQyqdHT4IP7
+    model: DashboardCard
+- entity_id: tKraoEc7meNduUEO0EnW7
+  card_id: eOHBYos1pfkmiHLE2jGZQ
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 1
+  col: 20
+  size_x: 4
+  size_y: 3
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: tKraoEc7meNduUEO0EnW7
+    model: DashboardCard
+- entity_id: KkxRhoGtbIiyWa_4d0XP_
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 4
+  col: 0
+  size_x: 24
+  size_y: 1
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    text: Registration & event trends
+    virtual_card:
+      archived: false
+      dataset_query: {}
+      display: heading
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: KkxRhoGtbIiyWa_4d0XP_
+    model: DashboardCard
+- entity_id: JVsoHJmvyI_zRs-yiNj1r
+  card_id: zPwzPOgByrqc_dr7meSe_
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 5
+  col: 0
+  size_x: 24
+  size_y: 6
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: JVsoHJmvyI_zRs-yiNj1r
+    model: DashboardCard
+- entity_id: dWjlNj6zuYy9AlFwyRloU
+  card_id: sFPyMNCT5S4YUrUqC9l2H
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 11
+  col: 0
+  size_x: 12
+  size_y: 6
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: dWjlNj6zuYy9AlFwyRloU
+    model: DashboardCard
+- entity_id: orVMcE717QQ1K_cPPvOJs
+  card_id: k_WhNbtzbEWeL-4Bgimx6
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 11
+  col: 12
+  size_x: 12
+  size_y: 6
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: orVMcE717QQ1K_cPPvOJs
+    model: DashboardCard
+- entity_id: 6aHf2dIGLIytsDWApbYdb
+  card_id: W7hN9lQwjdj9ICswmKs97
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 17
+  col: 0
+  size_x: 24
+  size_y: 7
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: 6aHf2dIGLIytsDWApbYdb
+    model: DashboardCard
+- entity_id: X6cEjQzEmi6XyqUKntjJo
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 24
+  col: 0
+  size_x: 24
+  size_y: 1
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    text: Who is registering (customers)
+    virtual_card:
+      archived: false
+      dataset_query: {}
+      display: heading
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: X6cEjQzEmi6XyqUKntjJo
+    model: DashboardCard
+- entity_id: KZN23KHnUzSky9Wc7j3TM
+  card_id: A-vXX_-X_hnqsNubmed1O
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 25
+  col: 0
+  size_x: 12
+  size_y: 6
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: KZN23KHnUzSky9Wc7j3TM
+    model: DashboardCard
+- entity_id: DbrenUt4bqvQRziPiMwPU
+  card_id: 8je3HkdpmaO0xGRW4dQX-
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 25
+  col: 12
+  size_x: 12
+  size_y: 6
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: DbrenUt4bqvQRziPiMwPU
+    model: DashboardCard
+- entity_id: NUM_q4sGN-HlhrLKOgFg3
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 31
+  col: 0
+  size_x: 24
+  size_y: 1
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    text: Sign-up responses
+    virtual_card:
+      archived: false
+      dataset_query: {}
+      display: heading
+      name: null
+      visualization_settings: {}
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: NUM_q4sGN-HlhrLKOgFg3
+    model: DashboardCard
+- entity_id: 7iWbbQl7rsu-frI1zlwRu
+  card_id: uLpYfXZiAekEgNS1Q8UIF
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 32
+  col: 0
+  size_x: 8
+  size_y: 6
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: 7iWbbQl7rsu-frI1zlwRu
+    model: DashboardCard
+- entity_id: q8rz6r2Kj5J3x1SufpJG9
+  card_id: FFZ5rV4xj3Az6_3U0esWD
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 32
+  col: 8
+  size_x: 8
+  size_y: 6
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: q8rz6r2Kj5J3x1SufpJG9
+    model: DashboardCard
+- entity_id: ogCfri1ffhP55yX1XTZoU
+  card_id: 5Qft0eimJGhPte4m47gxZ
+  created_at: '2026-06-10T13:08:30.252712Z'
+  row: 32
+  col: 16
+  size_x: 8
+  size_y: 6
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: OGjiqoKB5a1SIJTdburEA
+    model: Dashboard
+  - id: ogCfri1ffhP55yX1XTZoU
+    model: DashboardCard
+tabs: []
+width: fixed

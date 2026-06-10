@@ -1,0 +1,38 @@
+name: Check-in rate
+entity_id: uJyMfo4blATZICLgD1Rc_
+created_at: '2026-06-10T13:04:13.143072Z'
+creator_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+display: scalar
+collection_id: kvB2C7V6imMbqXv5duXEz
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Dirty Warehouse
+  stages:
+  - aggregation:
+    - - share
+      - {}
+      - - =
+        - {}
+        - - field
+          - {}
+          - - Dirty Warehouse
+            - public
+            - registrations
+            - checked_in
+        - true
+    source-table:
+    - Dirty Warehouse
+    - public
+    - registrations
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+card_schema: 23
+serdes/meta:
+- id: uJyMfo4blATZICLgD1Rc_
+  label: check_in_rate
+  model: Card
+metabase_version: v1.0.0-workspace-dev-instance-poc (07b93cf)
+type: metric

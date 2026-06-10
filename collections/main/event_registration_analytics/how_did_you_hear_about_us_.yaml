@@ -1,0 +1,50 @@
+name: How did you hear about us?
+entity_id: uLpYfXZiAekEgNS1Q8UIF
+created_at: '2026-06-10T13:05:08.122626Z'
+creator_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+display: bar
+collection_id: kvB2C7V6imMbqXv5duXEz
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Dirty Warehouse
+  stages:
+  - aggregation:
+    - - count
+      - {}
+    breakout:
+    - - field
+      - {}
+      - - Dirty Warehouse
+        - public
+        - registration_answers
+        - answer
+    filters:
+    - - =
+      - {}
+      - - field
+        - {}
+        - - Dirty Warehouse
+          - public
+          - registration_answers
+          - question
+      - How did you hear about us?
+    source-table:
+    - Dirty Warehouse
+    - public
+    - registration_answers
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  graph.dimensions:
+  - answer
+  graph.metrics:
+  - count
+card_schema: 23
+serdes/meta:
+- id: uLpYfXZiAekEgNS1Q8UIF
+  label: how_did_you_hear_about_us_
+  model: Card
+metabase_version: v1.0.0-workspace-dev-instance-poc (07b93cf)
+type: question

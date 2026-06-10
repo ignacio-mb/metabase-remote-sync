@@ -1,0 +1,46 @@
+created_at: '2026-06-10T12:53:37.409661Z'
+creator_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+description: 'Clean CRM contacts (excludes deleted): one row per contact with company, lifecycle stage, lead source, and subscription.'
+entity_id: HqqZ8QDG88Cz4pZnPzv7U
+name: contacts
+owner_user_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+source:
+  query:
+    database: Dirty Warehouse
+    stages:
+    - native: |
+        SELECT
+          c.contact_id,
+          initcap(btrim(c.first))                                AS first_name,
+          initcap(btrim(c.last))                                 AS last_name,
+          initcap(btrim(c.first)) || ' ' || initcap(btrim(c.last)) AS full_name,
+          lower(btrim(c.email_address))                          AS email,
+          c.company_id,
+          btrim(co.name)                                         AS company_name,
+          nullif(btrim(co.tier), '')                             AS company_tier,
+          CASE WHEN btrim(co.region) IN ('', 'N/A') THEN NULL
+               ELSE btrim(co.region) END                         AS company_region,
+          ls.stage                                               AS lifecycle_stage,
+          c.lifecycle_code,
+          btrim(c.lead_source)                                   AS lead_source,
+          CASE WHEN btrim(c.subscribed) = 'Y' THEN true
+               WHEN btrim(c.subscribed) = 'N' THEN false
+               ELSE NULL END                                     AS subscribed
+        FROM crm.crm_contacts c
+        LEFT JOIN crm.crm_companies co        ON c.company_id = co.company_id
+        LEFT JOIN crm.crm_lifecycle_stages ls ON c.lifecycle_code = ls.code
+        WHERE coalesce(c.is_deleted, 0) = 0
+      lib/type: mbql.stage/native
+    lib/type: mbql/query
+  type: query
+source_database_id: Dirty Warehouse
+tags: []
+target:
+  database: Dirty Warehouse
+  name: contacts
+  schema: public
+  type: table
+serdes/meta:
+- id: HqqZ8QDG88Cz4pZnPzv7U
+  label: contacts
+  model: Transform

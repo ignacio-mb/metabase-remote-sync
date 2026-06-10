@@ -1,0 +1,33 @@
+created_at: '2026-06-10T12:52:00.584888Z'
+creator_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+description: 'Clean CRM companies: one row per company with tidied region and tier.'
+entity_id: iVTG9lc15ikZT86IS0Cm_
+name: companies
+owner_user_id: api-key-user-8e50a750-058e-4e80-ac9c-11fda16e2a7c@api-key.invalid
+source:
+  query:
+    database: Dirty Warehouse
+    stages:
+    - native: |
+        SELECT
+          company_id,
+          btrim(name)                                            AS company_name,
+          nullif(btrim(domain), '')                              AS domain,
+          CASE WHEN btrim(region) IN ('', 'N/A') THEN NULL
+               ELSE btrim(region) END                            AS region,
+          nullif(btrim(tier), '')                                AS tier
+        FROM crm.crm_companies
+      lib/type: mbql.stage/native
+    lib/type: mbql/query
+  type: query
+source_database_id: Dirty Warehouse
+tags: []
+target:
+  database: Dirty Warehouse
+  name: companies
+  schema: public
+  type: table
+serdes/meta:
+- id: iVTG9lc15ikZT86IS0Cm_
+  label: companies
+  model: Transform

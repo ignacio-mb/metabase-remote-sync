@@ -1,0 +1,10 @@
+name: Event Registration Analytics
+description: 'Clean event-registration model: who registered, event analytics, custom responses, and customer breakdowns.'
+entity_id: kvB2C7V6imMbqXv5duXEz
+slug: event_registration_analytics
+created_at: '2026-06-10T13:01:52.477713Z'
+serdes/meta:
+- id: kvB2C7V6imMbqXv5duXEz
+  label: event_registration_analytics
+  model: Collection
+is_remote_synced: true
